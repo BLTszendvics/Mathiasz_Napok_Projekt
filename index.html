@@ -7,9 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mathiász Napok Project</title>
 
+    <link rel="icon" type="image/x-icon" href="img/mathiasz.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -21,48 +27,78 @@
 </head>
 
 <body>
-    <div class="head">
+    <div class="top">
         <nav class="navbar">
             <div id="logo" class="container">
                 <a class="navbar-brand" href="#">
-                    <img src="img/mathiasz.png" alt="Bootstrap" width="70" height="78">
+                    <img src="img/mathiasz.png" class="img-fluid" alt="logó">
                 </a>
             </div>
         </nav>
 
-        <div class="container full-border text-center">
-            <Header class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h1>Mezőgazdasági gépész / Kertész</h1>
-                        <h2>IN DEVELOPMENT</h2>
-                    </div>
+        <Header class="container text-center">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Mezőgazdasági gépész / Kertész</h1>
+                    <h2>IN DEVELOPMENT</h2>
                 </div>
-            </Header>
+            </div>
 
-
-            <Main class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, voluptatem minima quam
-                            veritatis commodi alias aspernatur porro eos nisi accusamus quae asperiores sapiente facilis
-                            excepturi. Quod consequuntur quos velit voluptatem!
-                        </p>
-                    </div>
-
-                    <div class="col-12">
-                        <button type="button" class="btn btn-success"><span class="material-symbols-outlined">
-                                play_arrow
-                            </span></i></button>
-                    </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, voluptatem minima quam
+                        veritatis commodi alias aspernatur porro eos nisi accusamus quae asperiores sapiente facilis
+                        excepturi. Quod consequuntur quos velit voluptatem!
+                    </p>
                 </div>
-            </Main>
-        </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <button type="button" class="btn btn-success"><span class="material-symbols-outlined">
+                            play_arrow
+                        </span></i></button>
+                </div>
+            </div>
+        </Header>
     </div>
+
+    <Main class="container text-center">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="title">Érdekelnek a szakmák? Tuddj meg többet a lenti QR kódok segítségével.</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/farm.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Bővebben a Mezőgazdasági gépész szakmáról</h5>
+                        <p class="card-text">Szkenneld be a QR kódot hogy megtudj több információt erről a szakmáról.
+                        </p>
+                        <img src="img/mezogazdasagi_gepesz.png" class="card-img-bottom" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card mb-3" style="width: 18rem;">
+                    <img src="img/farm.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Bővebben a Kertész szakmáról</h5>
+                        <p class="card-text">Szkenneld be a QR kódot hogy megtudj több információt erről a szakmáról.
+                        </p>
+                        <img src="img/kertesz.png" class="card-img-bottom" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </Main>
 
     <Footer class="container text-center">
         <div class="row">
-            <div class="col-12 bottom">
+            <div class="col-lg-12">
                 <h5>Készítette: Bali Bálint, Vodenicsár Rajmund</h5>
             </div>
         </div>
