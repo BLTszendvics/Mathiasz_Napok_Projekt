@@ -7,7 +7,7 @@
     <title>Document</title>
 
 </head>
-<body onmousemove="MouseMove(event)" onscroll="Scroll()" on>
+<body ondragstart="return false;" ondrop="return false;" onmousemove="MouseMove(event)" onscroll="Scroll(event)">
 
     <div id="imgmain" style="width: 400px; height: 400px; position: absolute; background-color: aqua; left: 300px; top: 300px;">
 
@@ -16,12 +16,12 @@
 
     <main id="imgcontainer" style="width: 100%; height: 700px; background-color: gray;">
 
-        <div onmousedown="MouseDown(event, 0)" onmouseup="MouseUp(event, 0)" style="width: 200px; height: 200px; position: absolute; background-image:url(images/image1/test.png); background-size: cover;">
+        <div onmousedown="MouseDown(event, 0)" onmouseup="MouseUp(event, 0)" style="width: 200px; height: 200px; position: absolute; left: 0px; top: 0px; background-image:url(images/image1/test.png); background-size: cover;">
 
         </div>
         
 
-        <div onmousedown="MouseDown(event, 1)" onmouseup="MouseUp(event, 1)" style="width: 200px; height: 200px; position: absolute; background-image:url(images/image1/test.png); background-size: cover;">
+        <div onmousedown="MouseDown(event, 1)" onmouseup="MouseUp(event, 1)" style="width: 200px; height: 200px; position: absolute; left: 0px; top: 0px; background-image:url(images/image1/test.png); background-size: cover;">
 
         </div>
 
