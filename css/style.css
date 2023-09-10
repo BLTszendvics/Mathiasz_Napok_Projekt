@@ -13,6 +13,12 @@ body::-webkit-scrollbar {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 5px;
+    border-style: solid;
+    border-color: #EEEEEE;
 }
 
 .btn {
@@ -58,4 +64,23 @@ a {
 #logo {
     width: 170px;
     height: 100%;
+}
+
+.divider {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.divider::before,
+.divider::after {
+    flex: 1;
+    content: '';
+    padding: 3px;
+    background-color: red;
+    margin: 5px;
+}
+
+.card {
+    margin: 0 auto;
 }
