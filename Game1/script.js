@@ -9,7 +9,7 @@ class Img {
     IPosX;
     IPosY;
 
-    constructor(_Obj, _Id, _x, _y) {
+    constructor(_Obj, _Id, _x, _y, _path) {
 
         this.Obj = _Obj;
         this.Id = _Id;
@@ -20,6 +20,10 @@ class Img {
         this.DefY = _y;
 
         this.ResetIPos();
+        
+        this.Obj.style.left = "100px"
+
+        this.Obj.style.backgroundImage = 'url("' + _path + '")';
 
     }
 
@@ -31,8 +35,13 @@ class Img {
     }
 
 }
-var timg = document.getElementById("imgcontainer").children;
-var Imgs = [new Img(timg[0], 11, 0, 0), new Img(timg[1], 21, 0, 0)];
+
+var imgtext = '<div style="width: 200px; height: 200px; position: absolute; background-size: cover;"';
+var imgtexte = '></div>';
+
+var cont = document.getElementById("imgcontainer");
+
+var Imgs = []; //new Img(timg[0], 11, 0, 0), new Img(timg[1], 21, 0, 0)
 
 /*var imageIDs = [11, 21];
 
@@ -63,11 +72,72 @@ var imageMainSize = imageSize * 2; // 2 * 2
 var mx;
 var my;
 
-var spawn = [100, 50, 2];
+var spawnPos = [50, 50, 1, 20];
+
+function Spawn() {
+
+    let y = 0;
+    let x = 0;
+
+    let y2 = spawnPos[1];
+    let x2 = spawnPos[0];
+
+    while ( y < size ) {
+
+        let i = x + y*size;
+
+        cont.innerHTML += (imgtext + 'id="i' + i + '"' 
+        + 'onmousedown="MouseDown(event, ' + i + ')"'
+        + 'onmouseup="MouseUp(event, ' + i + ')"'
+        + imgtexte);
+
+        let o = "i" + i;
+        let g = document.getElementById(o);
+
+        g.style.left = x2 + "px";
+        g.style.top = y2 + "px";
+
+        x2 += imageSize + spawnPos[3];
+        if ((i+1) % spawnPos[2] == 0) {
+
+            y2 += imageSize + spawnPos[3];
+            x2 = spawnPos[0];
+
+        } 
+
+        let j = new Img(g, ((x+1)*10)+y+1, x2, y2, 'images/image1/i0.png');
+
+        Imgs.push(j);
+
+        if (i != 0) {
+
+            console.log(Imgs[i].Obj);
+
+        }
+
+        //console.log(j.Obj);
+        //j.Obj.style.left = "10px";
+        //Imgs[i].Obj.style.left = "30px";
+
+        x++;
+
+        if (x == size) {
+
+            y++;
+            x = 0;
+
+        }
+
+    }
+    //Imgs[2].Obj.style.left = "300px";
+    //for (let i = 0; i < Imgs.length; i++) {console.log(Imgs[i].Obj)}
+    //console.log(document.getElementById("i2"));
+
+}
+
+Spawn();
 
 function MouseMove(m) {
-
-    console.log(drag);
 
     if (drag) {
 
@@ -87,11 +157,13 @@ function GetMousePositions(m) {
 }
 
 function MouseDown(m, iIndex) {
-    console.log("down " + " " + drag + " " + this.iIndex + " " + iIndex);
+
     if (!drag) {
 
         drag = true;
         this.iIndex = iIndex;
+
+        Imgs[0].Obj.style.left = "300px";
 
         if (Imgs[iIndex].InPlace) {
 
@@ -111,8 +183,7 @@ function MouseDown(m, iIndex) {
 }
 
 function MouseUp(m, iIndex) {
-    //console.log(this.iIndex + " " + iIndex);
-    console.log("up");
+
     if (this.iIndex != iIndex) {
 
 
@@ -163,7 +234,8 @@ function Move(x, y, i) {
 
     Imgs[i].Obj.style.left = (x - imageSize / 2) + "px";
     Imgs[i].Obj.style.top = (y - imageSize / 2) + "px";
-
+    Imgs[i].Obj.innerHTML = "asd";
+    
 }
 
 function Check(x, y) {
