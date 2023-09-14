@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mathiász Napok Project</title>
+    <title>Kezdőlap - Mathiász Napok Project</title>
 
     <link rel="icon" type="image/x-icon" href="img/mathiasz.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bevan&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,11 +28,28 @@
 
 <body>
     <div class="top">
-        <nav class="navbar">
-            <div id="logo" class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="img/mathiasz.png" class="img-fluid" alt="logó">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand d-md-none" href="index.html">
+                    <img src="img/mathiasz.png" class="img-fluid" alt="Mathiász logó">
                 </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item d-flex align-items-center">
+                            <a class="nav-link" href="#">Test</a>
+                        </li>
+                        <a class="navbar-brand d-none d-md-block" href="index.html">
+                            <img src="img/mathiasz.png" class="img-fluid" alt="Mathiász logó">
+                        </a>
+                        <li class="nav-item d-flex align-items-center">
+                            <a class="nav-link" href="#">Test</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
 
@@ -70,27 +87,39 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-lg-6">
+        <div class="row justify-content-evenly">
+            <div class="col-lg-4">
                 <div class="card" style="width: 18rem;">
-                    <img src="img/mezogazdasagi_gepesz.jpg" class="card-img-top" alt="...">
+                    <img src="img/mezogazdasagi_gepesz.jpg" class="card-img-top" alt="Mezőgazdasági gépész">
                     <div class="card-body">
-                        <h5 class="card-title">Bővebben a Mezőgazdasági gépész szakmáról</h5>
+                        <h5 class="card-title">
+                            Bővebben a
+                            <br>
+                            Mezőgazdasági gépész
+                            <br>
+                            szakmáról
+                        </h5>
                         <p class="card-text">Szkenneld be a QR kódot hogy megtudj több információt erről a szakmáról.
                         </p>
-                        <img src="img/mezogazdasagi_gepesz_qr.png" class="card-img-bottom" alt="">
+                        <img src="img/mezogazdasagi_gepesz_qr.png" class="card-img-bottom" alt="Mezőgazdasági gépész">
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-lg-4">
                 <div class="card mb-3" style="width: 18rem;">
-                    <img src="img/kertesz.jpg" class="card-img-top" alt="...">
+                    <img src="img/kertesz.jpg" class="card-img-top" alt="Kertész">
                     <div class="card-body">
-                        <h5 class="card-title">Bővebben a Kertész szakmáról</h5>
+                        <h5 class="card-title">
+                            Bővebben a
+                            <br>
+                            Kertész
+                            <br>
+                            szakmáról
+                        </h5>
                         <p class="card-text">Szkenneld be a QR kódot hogy megtudj több információt erről a szakmáról.
                         </p>
-                        <img src="img/kertesz_qr.png" class="card-img-bottom" alt="">
+                        <img src="img/kertesz_qr.png" class="card-img-bottom" alt="Kertész">
                     </div>
                 </div>
             </div>
@@ -104,6 +133,13 @@
             </div>
         </div>
     </Footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
