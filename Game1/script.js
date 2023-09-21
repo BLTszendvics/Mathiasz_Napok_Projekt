@@ -1,3 +1,9 @@
+function o(name) {
+
+    return document.getElementById(name);
+
+}
+
 class Img {
 
     Obj;
@@ -20,10 +26,8 @@ class Img {
         this.DefY = _y;
 
         this.ResetIPos();
-        
-        this.Obj.style.left = "100px"
 
-        this.Obj.style.backgroundImage = 'url("' + _path + '")';
+        o(this.Obj).style.backgroundImage = 'url("' + _path + '")';
 
     }
 
@@ -41,21 +45,17 @@ var imgtexte = '></div>';
 
 var cont = document.getElementById("imgcontainer");
 
-var Imgs = []; //new Img(timg[0], 11, 0, 0), new Img(timg[1], 21, 0, 0)
-
-/*var imageIDs = [11, 21];
-
-let tid = 11;
-for (let i = 0; i < timg.length; i++) {
-
-    console.log(t1[i]);
-
-}*/
+var Imgs = [];
+var iImgs = [];
 
 var size = 2;
 
 var map = [];
 for (let y = 0; y < size; y++) { let f = [];  map.push(f); for (let x = 0; x < size; x++) {map[y].push(false)}}
+
+for (let i = 0; i < size*size; i++) {iImgs.push(i)}
+
+iImgs = shuffle(iImgs);
 
 var good = 0;
 var maxGood = size * size;
@@ -67,25 +67,32 @@ var imageSize = 200;
 
 var imageMainX = 300;
 var imageMainY = 300;
+
+var spawnPos = [50, 750, 4, 20];
+
 var imageMainSize = imageSize * 2; // 2 * 2
 
 var mx;
 var my;
-
-var spawnPos = [50, 50, 1, 20];
 
 function Spawn() {
 
     let y = 0;
     let x = 0;
 
-    let y2 = spawnPos[1];
-    let x2 = spawnPos[0];
+    let x2 = 0;
+    let y2 = 0;
 
     while ( y < size ) {
 
-        let i = x + y*size;
+        let i = x + y*size;/*x + y*size*/;
+        let fakei = iImgs[x + y*size];
+        console.log(i);
 
+        let iy = Math.floor(fakei / spawnPos[2]);
+        y2 = spawnPos[1] + (iy * (imageSize + spawnPos[3]));
+        x2 = spawnPos[0] + ((fakei - iy*spawnPos[2]) * (imageSize + spawnPos[3]));
+        console.log(x2 + " " + y2 + " " + iy);
         cont.innerHTML += (imgtext + 'id="i' + i + '"' 
         + 'onmousedown="MouseDown(event, ' + i + ')"'
         + 'onmouseup="MouseUp(event, ' + i + ')"'
@@ -96,28 +103,10 @@ function Spawn() {
 
         g.style.left = x2 + "px";
         g.style.top = y2 + "px";
-
-        x2 += imageSize + spawnPos[3];
-        if ((i+1) % spawnPos[2] == 0) {
-
-            y2 += imageSize + spawnPos[3];
-            x2 = spawnPos[0];
-
-        } 
-
-        let j = new Img(g, ((x+1)*10)+y+1, x2, y2, 'images/image1/i0.png');
+        console.log('images/image1/img' + i + '.png');
+        let j = new Img(o, ((x+1)*10)+y+1, x2, y2, ('images/image1/img' + i + '.png')); //'images/image1/i0.png'
 
         Imgs.push(j);
-
-        if (i != 0) {
-
-            console.log(Imgs[i].Obj);
-
-        }
-
-        //console.log(j.Obj);
-        //j.Obj.style.left = "10px";
-        //Imgs[i].Obj.style.left = "30px";
 
         x++;
 
@@ -129,9 +118,6 @@ function Spawn() {
         }
 
     }
-    //Imgs[2].Obj.style.left = "300px";
-    //for (let i = 0; i < Imgs.length; i++) {console.log(Imgs[i].Obj)}
-    //console.log(document.getElementById("i2"));
 
 }
 
@@ -162,8 +148,6 @@ function MouseDown(m, iIndex) {
 
         drag = true;
         this.iIndex = iIndex;
-
-        Imgs[0].Obj.style.left = "300px";
 
         if (Imgs[iIndex].InPlace) {
 
@@ -208,7 +192,7 @@ function MouseUp(m, iIndex) {
 
             if (map[mapx][mapy]) {
 
-                Move(Imgs[this.iIndex].DefX+imageSize/2, Imgs[this.iIndex].DefX+imageSize/2, this.iIndex);
+                Move(Imgs[this.iIndex].DefX+imageSize/2, Imgs[this.iIndex].DefY+imageSize/2, this.iIndex);
 
             }
             else {
@@ -232,9 +216,8 @@ function MouseUp(m, iIndex) {
 
 function Move(x, y, i) {
 
-    Imgs[i].Obj.style.left = (x - imageSize / 2) + "px";
-    Imgs[i].Obj.style.top = (y - imageSize / 2) + "px";
-    Imgs[i].Obj.innerHTML = "asd";
+    o(Imgs[i].Obj).style.left = (x - imageSize / 2) + "px";
+    o(Imgs[i].Obj).style.top = (y - imageSize / 2) + "px";
     
 }
 
@@ -246,11 +229,43 @@ function Check(x, y) {
         Imgs[iIndex].InPlace = true;
 
     }
+    if (good == maxGood) {
+
+        alert("ezaz");
+
+    }
 
 }
 
 function Scroll(s) {
 
     MouseUp(window.event, this.iIndex);
+
+}
+
+function shuffle(l1) {
+
+    let l2 = [];
+    for (let i = 0; i < l1.length; i++) {
+
+        l2[i] = -1;
+
+    }
+
+    for (let i = 0; i < l1.length; i++) {
+
+        let e = Math.floor(Math.random()*l1.length);
+
+        while (l2[e] != -1) {
+
+            e = Math.floor(Math.random()*l1.length);
+
+        }
+
+        l2[e] = i;
+
+    }
+
+    return l2;
 
 }
