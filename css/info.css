@@ -17,7 +17,7 @@ body::-webkit-scrollbar {
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
-    border-bottom: 5px;
+    border-bottom: 0px;
     border-style: solid;
     border-color: #EEEEEE;
 }
@@ -41,14 +41,8 @@ body::-webkit-scrollbar {
 }
 
 .title {
-    font-family: 'Alfa Slab One', cursive;
     padding-bottom: 40px;
-}
-
-Header,
-Main,
-Footer {
-    margin: 50px;
+    margin-top: -50px;
 }
 
 .navbar-brand img {
@@ -81,7 +75,7 @@ Footer {
 }
 
 Header {
-    padding: 100px;
+    padding: 250px;
     text-shadow: -1px 0 rgb(0, 0, 0), rgb(0, 0, 0)x rgb(0, 0, 0), 1px 0 rgb(0, 0, 0), rgb(0, 0, 0)x rgb(0, 0, 0);
 }
 
@@ -109,13 +103,9 @@ a:hover {
     margin: 5px;
 }
 
-.card {
-    margin: 0 auto;
-}
-
 @keyframes slideInLeft {
     0% {
-        transform: translateX(-5%);
+        transform: translateX(-3%);
         opacity: 0;
     }
 
@@ -123,15 +113,6 @@ a:hover {
         transform: translateX(0);
         opacity: 1;
     }
-}
-
-
-
-
-html,
-body {
-    padding: 0;
-    margin: 0;
 }
 
 section {
@@ -162,25 +143,21 @@ section:last-child {
     z-index: -1;
 }
 
-
-
-
-
 /* COLORS AND OTHER STYLES TO ILLUSTRATE SECTIONS */
 section:nth-child(1) {
-    background-color: #2B4141;
+    background-color: #352F44;
 }
 
 section:nth-child(2) {
-    background-color: #0EB1D2;
+    background-color: #5C5470;
 }
 
 section:nth-child(3) {
-    background-color: #34E4EA;
+    background-color: #462e86;
 }
 
 section:nth-child(4) {
-    background-color: #3e6f6b;
+    background-color: #42301d;
 }
 
 section:nth-child(5) {
