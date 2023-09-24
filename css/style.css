@@ -46,9 +46,12 @@ body::-webkit-scrollbar {
 }
 
 Header,
-Main,
-Footer {
+Main {
     margin: 50px;
+}
+
+Footer {
+    margin-top: 50px;
 }
 
 .navbar-brand img {
@@ -57,6 +60,21 @@ Footer {
 
 .navbar-nav {
     align-items: center;
+}
+
+.left {
+    margin-left: -80px;
+}
+
+@media (max-width:991px) {
+    .left {
+        margin-left: 0px;
+    }
+}
+
+.navbar-nav>li {
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .navbar .navbar-nav .nav-link {
