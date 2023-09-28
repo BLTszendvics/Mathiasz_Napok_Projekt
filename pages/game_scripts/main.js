@@ -3,7 +3,7 @@ document.getElementById("games").style.height = "800px";
 let dButton = document.getElementById("start");
 let dGames = document.getElementById("games").children;
 
-let games = [0, 1];
+let games = [0, 1, 2];
 
 var gameIndex = 0;
 
@@ -15,6 +15,7 @@ var tOut = "";
 function StartGames() {
 
     games = shuffle(games);
+    games = [2];
     
     dButton.style.display = "none";
 
@@ -45,6 +46,7 @@ function NextGame() {
 function Load(ind) {
 
     dGames[games[gameIndex]].style.display = "block";
+    console.log(games);
 
     switch(games[gameIndex]) {
 
@@ -69,7 +71,7 @@ function Load(ind) {
 
 function EndGame() {
 
-    window.open("scoreboard.html?time" + tOut);
+    window.open("scoreboard.html?time=" + tOut);
 
 }
 
