@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body>
+<body onkeypress="KeyPress(event)" onkeydown="OtherPress(event)"> <!--game2-->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand d-lg-none" href="../index.html">
@@ -60,37 +60,68 @@
         </div>
 
         <div class="row">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas et quia quis veniam maiores velit,
-                libero perferendis eos quo, exercitationem nam distinctio quas beatae minima magnam, odit minus id
-                nostrum?</p>
-            <!--JÁTÉK 1 HELYE-->
+
+            <div id="outgames" style="padding: 2%;">
+
+                <div id="popup">
+
+
+                </div>
+
+                <div id="start">
+
+                    <input type="button" value="Rajmi majd megoldja gomb" onclick="StartGames()">
+
+                </div>
+            
+                <div id="games">
+
+                    <div id="game1" style="display: none; width: 100%; height: 100%; background-color: gray;" ondragstart="return false;" ondrop="return false;" onmousemove="MouseMove(event)" onscroll="Scroll(event)">
+    
+                        <div id="imgmain" style="position: absolute; background-color: aqua;">
+    
+    
+    
+                        </div>
+                    
+                        <div id="imgcontainer" style="width: 100%; height: 100%;">
+                    
+                            
+                    
+                        </div>
+    
+                    </div>
+
+                    <div id="game2" style="display: none; width: 100%; height: 100%; background-color: lightskyblue;">
+
+                        <div style="padding: 3%;">
+
+                            <input type="text" name="word" id="word" readonly>
+
+                        </div>
+                        <div id="wordcontainer">
+                    
+                            <div style="display: flex;">
+                    
+                            </div>
+                            
+                    
+                        </div>
+
+                    </div>
+    
+                </div>
+
+            </div>
+
         </div>
 
         <div class="row">
             <div class="col-lg-12">
-                <h3 class="title divider">Game 2</h3>
+                <h3 class="title divider"></h3>
             </div>
         </div>
 
-        <div class="row">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, esse officiis perferendis, expedita
-                voluptas doloribus assumenda deserunt maiores nesciunt, beatae sequi iusto ut dolore a dolorum
-                repellendus labore dolores. Vel.</p>
-            <!--JÁTÉK 2 HELYE-->
-        </div>
-
-        <div class="row">
-            <div class="col-lg-12">
-                <h3 class="title divider">Game 3</h3>
-            </div>
-        </div>
-
-        <div class="row">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum provident ipsum esse natus at, quisquam
-                dolorum. Quia alias velit dolor repudiandae voluptatibus autem quo quam accusantium ratione, dolores
-                quis aliquam.</p>
-            <!--JÁTÉK 3 HELYE-->
-        </div>
     </Main>
 
     <Footer class="container text-center">
@@ -108,5 +139,9 @@
         integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
         crossorigin="anonymous"></script>
 </body>
+
+<script src="game_scripts/main.js"></script>
+<script src="game_scripts/game1.js"></script>
+<script src="game_scripts/game2.js"></script>
 
 </html>
