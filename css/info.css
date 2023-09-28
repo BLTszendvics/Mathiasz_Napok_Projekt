@@ -17,7 +17,7 @@ body::-webkit-scrollbar {
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
-    border-bottom: 0px;
+    border-bottom: 5px;
     border-style: solid;
     border-color: #EEEEEE;
 }
@@ -89,8 +89,8 @@ body::-webkit-scrollbar {
     }
 }
 
-Header {
-    padding: 250px;
+header {
+    padding: 300px;
     text-shadow: -1px 0 rgb(0, 0, 0), rgb(0, 0, 0)x rgb(0, 0, 0), 1px 0 rgb(0, 0, 0), rgb(0, 0, 0)x rgb(0, 0, 0);
 }
 
@@ -101,12 +101,7 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-.divider {
-    font-size: 30px;
-    display: flex;
-    align-items: center;
+    cursor: pointer;
 }
 
 .divider::before,
@@ -131,30 +126,31 @@ a:hover {
 }
 
 section {
-    width: 100%;
     /*   skew adds a 4.76 degree slope and the translateY equation is based on the fact that a 4.76 degree slope has a gradient of 1:12 */
-    -webkit-transform: skew(0, -4.76deg) translateY(calc(50vw/-12));
-    -ms-transform: skew(0, -4.76deg) translateY(calc(50vw/-12));
-    transform: skew(0, -4.76deg) translateY(calc(50vw/-12));
+    transform: skew(0, -3deg) translateY(calc(50vw/-12));
     /*   And finally we account for the slope to make sure each section can occupy the full window... I added 10vw just to give it a little extra padding */
     min-height: calc(100vh - (110vw/-12));
 }
 
-section:not(:last-child) * {
-    -webkit-transform: skew(0, 4.76deg) translateY(calc(50vw/12));
-    -ms-transform: skew(0, 4.76deg) translateY(calc(50vw/12));
-    transform: skew(0, 4.76deg) translateY(calc(50vw/12));
+section:not(:last-child, :first-child) * {
+    transform: skew(0, 3deg) translateY(calc(50vw/12));
     margin-top: calc(50vw/-12);
 }
 
 section:last-child {
     position: relative;
-    -webkit-transform: skew(0);
-    -ms-transform: skew(0);
     transform: skew(0);
     margin-top: calc(100vw/-12);
     padding-top: calc(100vw/12);
     min-height: 100vh;
+    z-index: -1;
+}
+
+section:first-child {
+    position: relative;
+    transform: skew(0);
+    margin-top: calc(100vw/-12);
+    padding-top: calc(100vw/12);
     z-index: -1;
 }
 
@@ -180,13 +176,7 @@ section:nth-child(5) {
 }
 
 section {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
 }
