@@ -57,7 +57,7 @@ var iImgs = [];
 var size = 2;
 
 var map = [];
-for (let y = 0; y < size; y++) { let f = [];  map.push(f); for (let x = 0; x < size; x++) {map[y].push(false)}}
+for (let y = 0; y < size; y++) { let f = []; map.push(f); for (let x = 0; x < size; x++) { let g = [false, -1]; map[y].push(g); }}
 
 for (let i = 0; i < size*size; i++) {iImgs.push(i)}
 
@@ -233,7 +233,8 @@ function MouseDown(m, iIndex) {
         }
         if (Imgs[iIndex].IPosX != -1) {
 
-            map[Imgs[iIndex].IPosX][Imgs[iIndex].IPosY] = false;
+            map[Imgs[iIndex].IPosX][Imgs[iIndex].IPosY][0] = false;
+            map[Imgs[iIndex].IPosX][Imgs[iIndex].IPosY][1] = -1;
             Imgs[iIndex].ResetIPos();
 
         }
@@ -266,14 +267,29 @@ function MouseUp(m, iIndex) {
             let mapx = ix / imageSize;
             let mapy = iy / imageSize; 
 
-            if (map[mapx][mapy]) {
+            if (map[mapx][mapy][0]) {
 
-                Move(Imgs[this.iIndex].DefX+imageSize/2, Imgs[this.iIndex].DefY+imageSize/2, this.iIndex);
+                let n = map[mapx][mapy][1];
+
+                Move(Imgs[n].DefX + imageSize / 2, Imgs[n].DefY + imageSize / 2, n);
+                Imgs[n].ResetIPos();
+
+                //Move(Imgs[this.iIndex].DefX + imageSize / 2, Imgs[this.iIndex].DefY + imageSize / 2, this.iIndex);
+
+                map[mapx][mapy][1] = this.iIndex;
+
+                Imgs[this.iIndex].IPosX = mapx;
+                Imgs[this.iIndex].IPosY = mapy;
+
+                Move(x, y, this.iIndex);
+    
+                Check(mapx, mapy);
 
             }
             else {
                 
-                map[mapx][mapy] = true;
+                map[mapx][mapy][0] = true;
+                map[mapx][mapy][1] = this.iIndex;
 
                 Imgs[this.iIndex].IPosX = mapx;
                 Imgs[this.iIndex].IPosY = mapy;

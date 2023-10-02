@@ -64,6 +64,14 @@ function TextOut(b) {
         t += score[i][0] + " " + score[i][1] + "<br>";
 
     }
+    if (!placed) {
+
+        t += "You " + curscore + "<br>";
+
+        placed = true;
+        curi = score.length;
+
+    }
 
     document.getElementById("out").innerHTML = t;
 
