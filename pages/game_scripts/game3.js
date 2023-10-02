@@ -167,6 +167,4 @@ function Change(index) {
 
     }
 
-    console.log(cCorrect + " " + document.getElementById('s' + index).value);
-
 }

@@ -15,7 +15,7 @@ var tOut = "";
 function StartGames() {
 
     games = shuffle(games);
-    games = [2];
+    //games = [2];
     
     dButton.style.display = "none";
 
