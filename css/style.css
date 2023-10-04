@@ -136,11 +136,12 @@ a:hover {
 
 .card {
     margin: 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 @keyframes slideInLeft {
     0% {
-        transform: translateX(-5%);
+        transform: translateX(-2%);
         opacity: 0;
     }
 
@@ -211,4 +212,8 @@ a:hover {
         }
 
     }
+}
+
+.playBut:hover {
+    cursor: pointer;
 }

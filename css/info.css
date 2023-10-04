@@ -90,6 +90,15 @@ a:hover {
     cursor: pointer;
 }
 
+.content-img {
+    border-width: 3px;
+    border-style: solid;
+    border-color: #EEEEEE;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 95%;
+}
+
 .divider::before,
 .divider::after {
     flex: 1;
@@ -115,7 +124,10 @@ section {
     /*   skew adds a 4.76 degree slope and the translateY equation is based on the fact that a 4.76 degree slope has a gradient of 1:12 */
     transform: skew(0, -2deg) translateY(calc(50vw/-12));
     /*   And finally we account for the slope to make sure each section can occupy the full window... I added 10vw just to give it a little extra padding */
-    min-height: calc(100vh - (110vw/-12));
+    min-height: calc(100vh - (50vw/-12));
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 section:not(:last-child, :first-child) * {
@@ -147,27 +159,21 @@ section:first-child {
 
 /* COLORS AND OTHER STYLES TO ILLUSTRATE SECTIONS */
 section:nth-child(1) {
-    background-color: #352F44;
+    background-color: #222831;
 }
 
 section:nth-child(2) {
-    background-color: #5C5470;
+    background-color: #393E46;
 }
 
 section:nth-child(3) {
-    background-color: #462e86;
+    background-color: #222831;
 }
 
 section:nth-child(4) {
-    background-color: #42301d;
+    background-color: #393E46;
 }
 
 section:nth-child(5) {
-    background-color: #b19f63;
-}
-
-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #222831;
 }
