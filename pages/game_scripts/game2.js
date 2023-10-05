@@ -5,14 +5,26 @@ let green = "greenyellow"
 let def = "burlywood";
 let yellow = "yellow";
 
+let letterSize = 0;
+
 let container = document.getElementById("wordcontainer");
 
 let wordStart = '<div style="display: flex; justify-content:center">';
 let wordEnd = '</div>';
 
-let letterStart = '<div style="padding:10px; display: flex;"><div style="width:100px; height: 100px; font-size: 30px; background-color:';
+/*let letterStart = '100px; height: 100px; font-size: 30px; background-color:';
 let letterMiddle = '"><p style="text-align: center; vertical-align: middle;">';
-let letterEnd = '</p></div></div>';
+let letterEnd = '</p></div></div>';*/
+
+let letterText = [
+    
+    '<div style="padding:10px; display: flex;"><div style="width:',
+    'px; height: ',
+    'px; font-size: 30px; background-color:',
+    '"><p style="text-align: center; vertical-align: middle;">',
+    '</p></div></div>'
+
+]
 
 var currentHTML = wordStart;
 
@@ -25,6 +37,8 @@ var loaded = false;
 function Load2() {
 
     loaded = true;
+
+    letterSize = document.getElementById("body").offsetWidth / 16;
 
 }
 
@@ -175,7 +189,9 @@ function CheckW(ww) {
 
 function CreateLetter(l, c) {
 
-    currentHTML += letterStart + c + letterMiddle + l + letterEnd; 
+    currentHTML += letterText[0] + letterSize + letterText[1] + letterSize + letterText[2] + c + letterText[3] + l + letterText[4];
+    
+    //currentHTML += letterStart + c + letterMiddle + l + letterEnd;
 
 }
 
