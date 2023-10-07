@@ -1,5 +1,14 @@
-let word = ["R", "A", "J", "M", "A"];
-let letterNumber = 5;
+let allWords = [
+
+    "ÁRPA",
+    "KUKORICA",
+    "KOMBÁJN",
+    "TRAKTOR",
+    "MOTOR"
+]
+
+let word = [];
+let letterNumber;
 
 let green = "greenyellow"
 let def = "burlywood";
@@ -40,6 +49,19 @@ function Load2() {
 
     letterSize = document.getElementById("body").offsetWidth / 16;
 
+    let i = Math.floor(Math.random()*allWords.length);
+    let w = allWords[i];
+
+    for (let e = 0; e < w.length; e++) {
+
+        word.push(w[e]);
+
+    }
+
+    letterNumber = w.length;
+
+    document.getElementById("wordlenumber").innerHTML = letterNumber;
+
 }
 
 function OtherPress(e) {
@@ -65,7 +87,7 @@ function KeyPress(e) {
             Enter();
     
         }
-        else if ((c > 64 && c < 91) || (c > 96 && c < 123)) {
+        else if (CheckLetter(c)) {
     
             document.getElementById("word").value += e.key;
     
@@ -226,4 +248,14 @@ function Win() {
     console.log("ezaz");
     NextGame();
 
+}
+
+function CheckLetter(c) {
+
+    return ((c > 64 && c < 91) || (c > 96 && c < 123) ||
+        c == 246 || c == 252 || c == 243 || c == 337 ||
+        c == 250 || c == 233 || c == 225 || c == 237 ||
+        c == 214 || c == 220 || c == 211 || c == 336 ||
+        c == 218 || c == 201 || c == 193 || c == 205);
+    
 }

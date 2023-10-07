@@ -1,15 +1,13 @@
 let sep = '¤3';
 let sep2 = '÷3';
 
-const queryString = window.location.search;
-const url = new URLSearchParams(queryString);
+//const queryString = window.location.search;
+//const url = new URLSearchParams(queryString);
 
-const ctime = url.get('time');
-
-document.getElementById("out").innerHTML = ctime;
+let ctime; //= url.get('time');
 
 let score = [];
-let cscore = document.cookie.split(sep);
+let cscore;
 
 let curscore;
 let curi;
@@ -19,7 +17,17 @@ score.push(["peti", "02:21:40"]);
 score.push(["robi", "00:52:25"]);
 SaveScores();*/
 
+function LoadS() {
+
+    LoadScores();
+
+}
+
 function LoadScores() {
+
+    ctime = tOut;
+
+    document.getElementById("out").innerHTML = ctime;
 
     cscore = document.cookie.split(sep);
 
@@ -48,8 +56,6 @@ function TextOut(b) {
     let placed = b;
 
     for (let i = 0; i < score.length; i++) {
-
-        console.log(curscore);
 
         if (!placed && GetTime(curscore) < GetTime(score[i][1])) {
 
@@ -95,8 +101,6 @@ function SaveScores() {
 
 function GetTime(t) {
 
-    console.log(t);
-
     let s = t.split(':');
 
     return parseInt(s[0])*60*60 + parseInt(s[1])*60 + parseInt(s[2]);
@@ -115,7 +119,3 @@ function Rajmund() { //button clicked
     document.getElementById("regcon").style.display = "none";
 
 }
-
-LoadScores();
-
-console.log(document.cookie)

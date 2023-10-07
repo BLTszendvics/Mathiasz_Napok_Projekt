@@ -16,7 +16,6 @@ var tOut = "";
 function StartGames() {
 
     games = shuffle(games);
-    games = [0];
 
     header.style.display = "none";
     footer.style.display = "none";
@@ -77,10 +76,16 @@ function Load(ind) {
 
 function EndGame() {
 
+    TimerOff();
+
     header.style.display = "block";
     footer.style.display = "block";
 
-    window.open("scoreboard.html?time=" + tOut);
+    dGames[3].style.display = "block"; //the last one - scoreboard
+
+    LoadS();
+    
+    //window.open("scoreboard.html?time=" + tOut);
 
 }
 
@@ -125,8 +130,6 @@ function TimerOn() {
 function TimerOff() {
 
     clearInterval(Timer);
-
-    console.log("timer is off");
 
 }
 
