@@ -54,7 +54,10 @@ var cont = document.getElementById("imgcontainer");
 var Imgs = [];
 var iImgs = [];
 
-var size = 2;
+var imgr = [0, 1, 2, 3, 4];
+var imgn;
+
+var size = 4;
 
 var map = [];
 for (let y = 0; y < size; y++) { let f = []; map.push(f); for (let x = 0; x < size; x++) { let g = [false, -1]; map[y].push(g); }}
@@ -82,6 +85,10 @@ var mx;
 var my;
 
 function Load1() {
+
+    imgr = shuffle(imgr);
+    imgn = imgr[0];
+    imgn = 2;
     
     LoadSizes();
 
@@ -106,17 +113,17 @@ function LoadThings() {
     // responsivity
     if (wWidth < 600) {
 
-        imageSize = (wWidth/5*2);
+        imageSize = (wWidth/5*2) * 2 / size;
 
     }
     else if (wWidth < 1000) {
 
-        imageSize = (wWidth/4);
+        imageSize = (wWidth/4) * 2 / size;
 
     }
     else {
 
-        imageSize = (wWidth/6);
+        imageSize = (wWidth/6) * 2 / size;
 
     }
 
@@ -207,7 +214,7 @@ function Spawn() {
         g.style.left = x2 + "px";
         g.style.top = y2 + "px";
 
-        let j = new Img(o, ((x+1)*10)+y+1, x2, y2, ('./game_images/image1/img' + i + '.png')); //'images/image1/i0.png'
+        let j = new Img(o, ((x+1)*10)+y+1, x2, y2, ('./game_images/image' + imgn + '/img_' + y + '_' + x + '.png')); //'images/image1/i0.png'
 
         Imgs.push(j);
 
@@ -352,7 +359,7 @@ function Check(x, y) {
         NextGame();
 
     }
-
+    console.log(good + " " + parseInt((x + 1) + "" + (y + 1)) + " " + Imgs[iIndex].Id);
 }
 
 function Scroll(s) {
