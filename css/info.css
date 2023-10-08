@@ -140,7 +140,7 @@ section:not(:last-child, :first-child) * {
 
 section:last-child {
     position: relative;
-    transform: skew(0, -2deg) translateY(calc(50vw/12));
+    transform: skew(0);
     margin-top: calc(100vw/-12);
     padding-top: calc(100vw/12);
     min-height: 100vh;
