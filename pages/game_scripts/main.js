@@ -16,6 +16,7 @@ var tOut = "";
 function StartGames() {
 
     games = shuffle(games);
+    //games = [0];
 
     header.style.display = "none";
     footer.style.display = "none";
