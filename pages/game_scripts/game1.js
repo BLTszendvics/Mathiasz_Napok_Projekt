@@ -54,7 +54,7 @@ var cont = document.getElementById("imgcontainer");
 var Imgs = [];
 var iImgs = [];
 
-var imgr = [0, 1, 2, 3, 4];
+var imgr = [0, 1, 2];
 var imgn;
 
 var size = 4;
@@ -88,7 +88,7 @@ function Load1() {
 
     imgr = shuffle(imgr);
     imgn = imgr[0];
-    imgn = 2;
+    //imgn = 2;
     
     LoadSizes();
 
