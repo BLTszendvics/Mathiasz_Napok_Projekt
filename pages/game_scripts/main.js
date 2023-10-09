@@ -1,7 +1,8 @@
-document.getElementById("games").style.height = "800px";
-
 let dButton = document.getElementById("start");
 let dGames = document.getElementById("games").children;
+
+let header = document.getElementById("header");
+let footer = document.getElementById("footer");
 
 let games = [0, 1, 2];
 
@@ -15,7 +16,12 @@ var tOut = "";
 function StartGames() {
 
     games = shuffle(games);
-    //games = [2];
+    //games = [0];
+
+    header.style.display = "none";
+    footer.style.display = "none";
+
+    document.getElementById("games").style.height = document.getElementById("body").offsetWidth/6*2 + "px";
     
     dButton.style.display = "none";
 
@@ -46,17 +52,17 @@ function NextGame() {
 function Load(ind) {
 
     dGames[games[gameIndex]].style.display = "block";
-    console.log(games);
+    //console.log(games);
 
     switch(games[gameIndex]) {
 
         case 0:
-            console.log("0");
+
             Load1();
             break;
 
         case 1:
-            console.log("1");
+
             Load2();
             break;
 
@@ -71,7 +77,16 @@ function Load(ind) {
 
 function EndGame() {
 
-    window.open("scoreboard.html?time=" + tOut);
+    TimerOff();
+
+    header.style.display = "block";
+    footer.style.display = "block";
+
+    dGames[3].style.display = "block"; //the last one - scoreboard
+
+    LoadS();
+    
+    //window.open("scoreboard.html?time=" + tOut);
 
 }
 
@@ -116,8 +131,6 @@ function TimerOn() {
 function TimerOff() {
 
     clearInterval(Timer);
-
-    console.log("timer is off");
 
 }
 

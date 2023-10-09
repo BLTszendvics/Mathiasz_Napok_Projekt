@@ -4,7 +4,19 @@ let inputtexts = [
     "A balázs nagyon;0+c+nagy+he?;!;",
     "A ;0+magyarokat+románokat+franciákat;szeressük.",
     "Who's gonna carry the;2+single moms+trains+boat;?!",
-    "Piros szív, fehér hó,;0+zöld+kék+rózsaszín;levél."
+    "Piros szív, fehér hó,;0+zöld+kék+rózsaszín;levél.",
+
+
+    "A gőzgépet ;1+Gotilieb Daimler+James Watt+Rudolf Diesel; találta fel.",
+    "A négyütemű Ottó motor helyes folyamata: ;2+terjeszkedés - szívás - kipufogás - sűrítés+szívás - terjeszkedés - sűrítés - kipufogás+szívás - sűrítés - terjeszkedés - kipufogás;.",
+    "A ;0+tüzelőanyag-ellátó rendszer+dugattyúemelő rugó+kotló; a motorok egyik fő szerkezeti egysége.",
+
+    "A „kukoricafattyasodás“ fogalma:;2+A kukoricán parazita élősködik+A kukorica nem terem akkor mennyiségben ,mint vártuk+A kukorica oldalhajtást növeszt;.",
+    "Az őszi bűza:;1+Április-Májusban+Július-Augusztusban+Június-Júliusban; kezd teremni.",
+    "A ;1+Juh+Borjú+Birka; a tehén kicsinye.",
+    "A(z) ;2+ásás más szóval+palánták elültetése+növényvédelmi eljárás; a csávázás jelentése.",
+
+    "Az ekének a ;0+előhántó+tolórúd+kulissza;az egyik működő része"
 
 ];
 
@@ -60,6 +72,13 @@ let n = 5;
 let cCorrect = 0;
 let maxCorrect = n;
 
+let order = [];
+for (let i = 0; i < inputtexts.length; i++) {
+
+    order.push(i);
+
+}
+
 let corrects = [];
 for (let i = 0; i < n; i++) {
 
@@ -69,13 +88,15 @@ for (let i = 0; i < n; i++) {
 
 var Sentences = [];
 
-for (let i = 0; i < inputtexts.length; i++) {
-
-    Sentences.push(new Sentence(inputtexts[i]));
-
-}
-
 function Load3() {
+
+    order = shuffle(order);
+
+    for (let i = 0; i < inputtexts.length; i++) {
+
+        Sentences.push(new Sentence(inputtexts[order[i]]));
+    
+    }
 
     for (let i = 0; i < 5; i++) {
 
