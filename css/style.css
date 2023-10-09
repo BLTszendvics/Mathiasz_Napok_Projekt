@@ -29,24 +29,6 @@ select {
     border-color: #EEEEEE;
 }
 
-.btn {
-    background-color: #64ccc5d5;
-    color: rgb(0, 0, 0);
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-top: 30px;
-    width: 140px;
-    height: 100px;
-    transition: width 1s, height 1s;
-}
-
-.btn:hover {
-    width: 160px;
-    height: 110px;
-}
-
 .title {
     font-family: 'Alfa Slab One', cursive;
     padding-bottom: 40px;
