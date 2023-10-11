@@ -10,10 +10,8 @@ body::-webkit-scrollbar {
 }
 
 select {
-
     margin-left: 1%;
     margin-right: 1%;
-
 }
 
 .top {
@@ -87,7 +85,7 @@ footer {
     }
 }
 
-Header {
+header {
     padding: 100px;
     text-shadow: -1px 0 rgb(0, 0, 0), rgb(0, 0, 0)x rgb(0, 0, 0), 1px 0 rgb(0, 0, 0), rgb(0, 0, 0)x rgb(0, 0, 0);
 }
@@ -205,9 +203,10 @@ a:hover {
     left: 50%;
     top: 50%;
     z-index: 1;
-    width: 120px;
-    height: 120px;
-    margin: -76px 0 0 -76px;
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    transform: translate(-50%, -50%);
 }
 
 .duo {
@@ -215,7 +214,6 @@ a:hover {
     width: 50px;
     background: hsla(0, 0%, 0%, 0.0);
     position: absolute;
-
 }
 
 .duo,
@@ -232,7 +230,6 @@ a:hover {
 .duo2 {
     left: 30px
 }
-
 
 .dot {
     width: 20px;
@@ -302,7 +299,7 @@ a:hover {
     animation-direction: reverse;
 }
 
-/* Add animation to "page content" */
+/* Animation to "page content" */
 .animate-bottom {
     position: relative;
     animation-name: animatebottom;
