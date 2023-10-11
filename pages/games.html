@@ -26,110 +26,128 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body onkeypress="KeyPress(event)" onkeydown="OtherPress(event)" id="body"> <!--game2-->
-    <nav class="navbar navbar-expand-lg" id="header">
-        <div class="container">
-            <a class="navbar-brand d-lg-none" href="../index.html">
-                <img src="../img/mathiasz.png" class="img-fluid" alt="Mathiász logó">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto d-flex justify-content-center">
-                    <li class="nav-item d-inline-flex p-2">
-                        <a class="nav-link text-center left" href="m_g_info.html">Mezőgazdasági<br>gépész</a>
-                    </li>
-                    <a class="navbar-brand d-none d-lg-block d-inline-flex p-2" href="../index.html">
-                        <img src="../img/mathiasz.png" class="img-fluid" alt="Mathiász logó">
-                    </a>
-                    <li class="nav-item d-inline-flex p-2">
-                        <a class="nav-link" href="k_info.html">Kertész</a>
-                    </li>
-                </ul>
-            </div>
+<body onload="loadingAnimation()" style="margin:0;" onkeypress="KeyPress(event)" onkeydown="OtherPress(event)" id="body"> <!--game2-->
+    <div id="loader">
+        <div class="duo duo1">
+            <div class="dot dot-a"></div>
+            <div class="dot dot-b"></div>
         </div>
-    </nav>
-
-    <Main class="container-fluid text-center">
-        <div class="row">
-            <div class="col-lg-12">
-                <h3 class="title divider" id="tOut">Játék</h3>
-            </div>
+        <div class="duo duo2">
+            <div class="dot dot-a"></div>
+            <div class="dot dot-b"></div>
         </div>
+    </div>
 
-        <div class="row">
+    <div style="display:none;" id="myDiv" class="animate-bottom">
 
-            <div id="outgames" style="padding: 2%;">
-
-                <div id="popup">
-
-
+        <nav class="navbar navbar-expand-lg" id="header">
+            <div class="container">
+                <a class="navbar-brand d-lg-none" href="../index.html">
+                    <img src="../img/mathiasz.png" class="img-fluid" alt="Mathiász logó">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto d-flex justify-content-center">
+                        <li class="nav-item d-inline-flex p-2">
+                            <a class="nav-link text-center left" href="m_g_info.html">Mezőgazdasági<br>gépész</a>
+                        </li>
+                        <a class="navbar-brand d-none d-lg-block d-inline-flex p-2" href="../index.html">
+                            <img src="../img/mathiasz.png" class="img-fluid" alt="Mathiász logó">
+                        </a>
+                        <li class="nav-item d-inline-flex p-2">
+                            <a class="nav-link" href="k_info.html">Kertész</a>
+                        </li>
+                    </ul>
                 </div>
+            </div>
+        </nav>
 
-                <div id="start">
-                    <h1>Készen állsz a játékra?</h1>
-                    <a onclick="StartGames()" class='playBut'>
-                        <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In  -->
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="213.7px"
-                            height="150px" viewBox="0 0 213.7 213.7" enable-background="new 0 0 213.7 213.7"
-                            xml:space="preserve">
+        <main class="container-fluid text-center">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="title divider" id="tOut">Játék</h3>
+                </div>
+            </div>
 
-                            <polygon class='triangle' id="XMLID_18_" fill="none" stroke-width="7" stroke-linecap="round"
-                                stroke-linejoin="round" stroke-miterlimit="10" points="
+            <div class="row">
+
+                <div id="outgames" style="padding: 2%;">
+
+                    <div id="popup">
+
+
+                    </div>
+
+                    <div id="start">
+                        <h1>Készen állsz a játékra?</h1>
+                        <a onclick="StartGames()" class='playBut'>
+                            <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In  -->
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px"
+                                width="213.7px" height="150px" viewBox="0 0 213.7 213.7"
+                                enable-background="new 0 0 213.7 213.7" xml:space="preserve">
+
+                                <polygon class='triangle' id="XMLID_18_" fill="none" stroke-width="7"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
                           73.5,62.5 148.5,105.8 73.5,149.1 " />
 
-                            <circle class='circle' id="XMLID_17_" fill="none" stroke-width="7" stroke-linecap="round"
-                                stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3" />
-                        </svg>
-                    </a>
-                </div>
-            
-                <div id="games">
-
-                    <div id="game1" style="display: none; width: 100%; background-color: gray;" ondragstart="return false;" ondrop="return false;" onmousemove="MouseMove(event)" onscroll="Scroll(event)">
-    
-                        <div>
-    
-                            <img src="game_images/border.png" alt="" id="imgmain" style="position: absolute;">
-    
-                        </div>
-                    
-                        <div id="imgcontainer" style="width: 100%; height: 100%;">
-                    
-                            
-                    
-                        </div>
-    
+                                <circle class='circle' id="XMLID_17_" fill="none" stroke-width="7"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="106.8"
+                                    cy="106.8" r="103.3" />
+                            </svg>
+                        </a>
                     </div>
 
-                    <div id="game2" style="display: none; width: 100%; height: 100%; background-color: lightskyblue;">
+                    <div id="games">
 
-                        <p id="wordlenumber">
+                        <div id="game1" style="display: none; width: 100%; background-color: gray;"
+                            ondragstart="return false;" ondrop="return false;" onmousemove="MouseMove(event)"
+                            onscroll="Scroll(event)">
 
-                        </p>
+                            <div>
 
-                        <div style="padding: 3%;">
+                                <img src="game_images/border.png" alt="" id="imgmain" style="position: absolute;">
 
-                            <input type="text" name="word" id="word" readonly>
-
-                        </div>
-                        <div id="wordcontainer">
-                    
-                            <div style="display: flex;">
-                    
                             </div>
-                            
-                    
+
+                            <div id="imgcontainer" style="width: 100%; height: 100%;">
+
+
+
+                            </div>
+
                         </div>
 
-                    </div>
+                        <div id="game2"
+                            style="display: none; width: 100%; height: 100%; background-color: lightskyblue;">
 
-                    <div id="game3" style="display: none;">
+                            <p id="wordlenumber">
 
-                        <!--<label>
+                            </p>
+
+                            <div style="padding: 3%;">
+
+                                <input type="text" name="word" id="word" readonly>
+
+                            </div>
+                            <div id="wordcontainer">
+
+                                <div style="display: flex;">
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                        <div id="game3" style="display: none;">
+
+                            <!--<label>
                             asd
                         </label>
                         <select name="" id="s0" onchange="Change(0)">
@@ -139,51 +157,53 @@
                         <label>
                             asd
                         </label>-->
-                    </div>
+                        </div>
 
-                    <div id="scoreboard" style="display: none;">
+                        <div id="scoreboard" style="display: none;">
 
-                        <p id="out">
-        
-                        </p>
-                    
-                        <p id="yourscore">
-                            itt a scoreod
-                        </p>
-                        <div id="regcon">
-                    
-                            <p>
-                                ide a neved pls:
+                            <p id="out">
+
                             </p>
-                            <input type="input" id="yourname">
-                            <input type="button" value="Rajmund" onclick="Rajmund()">
-                    
+
+                            <p id="yourscore">
+                                itt a scoreod
+                            </p>
+                            <div id="regcon">
+
+                                <p>
+                                    ide a neved pls:
+                                </p>
+                                <input type="input" id="yourname">
+                                <input type="button" value="Rajmund" onclick="Rajmund()">
+
+                            </div>
+
                         </div>
 
                     </div>
-    
+
                 </div>
 
             </div>
 
-        </div>
-
-        <div class="row">
-            <div class="col-lg-12">
-                <h3 class="title divider">Játék</h3>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="title divider">Játék</h3>
+                </div>
             </div>
-        </div>
 
-    </Main>
+        </main>
 
-    <Footer class="container text-center" id="footer">
-        <div class="row">
-            <div class="col-lg-12">
-                <h5>Készítette: Bali Bálint, Vodenicsár Rajmund</h5>
-                <h6>2023 © Siófoki SZC Mathiász János Technikum és Gimnázium</h6>
+        <footer class="container text-center" id="footer">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h5>Készítette: Bali Bálint, Vodenicsár Rajmund</h5>
+                    <h6>2023 © Siófoki SZC Mathiász János Technikum és Gimnázium</h6>
+                </div>
             </div>
-        </div>
-    </Footer>
+        </footer>
+
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -198,5 +218,6 @@
 <script src="game_scripts/game2.js"></script>
 <script src="game_scripts/game3.js"></script>
 <script src="game_scripts/scoreboard.js"></script>
+<script src="../js/main.js"></script>
 
 </html>

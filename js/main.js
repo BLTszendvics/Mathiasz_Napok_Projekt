@@ -1,3 +1,14 @@
+let temp;
+
+function loadingAnimation() {
+  temp = setTimeout(showPage, 1000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+
 function Tractor() {
     document.getElementById("nav1").style.color = 'rgb(255, 0, 0)';
     document.getElementById("nav2").style.color = '#EEEEEE';

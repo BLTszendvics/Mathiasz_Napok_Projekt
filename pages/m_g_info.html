@@ -26,182 +26,208 @@
     <link rel="stylesheet" href="../css/info.css">
 </head>
 
-<body>
-    <div class="top">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand d-lg-none" href="../index.html">
-                    <img src="../img/mathiasz.png" class="img-fluid" alt="Mathiász logó">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto d-flex justify-content-center">
-                        <li class="nav-item d-inline-flex p-2">
-                            <a class="nav-link active text-center left" aria-current="page"
-                                href="#">Mezőgazdasági<br>gépész</a>
-                        </li>
-                        <a class="navbar-brand d-none d-lg-block d-inline-flex p-2" href="../index.html">
-                            <img src="../img/mathiasz.png" class="img-fluid" alt="Mathiász logó">
-                        </a>
-                        <li class="nav-item d-inline-flex p-2">
-                            <a class="nav-link text-center" href="k_info.html">Kertész</a>
-                        </li>
-                    </ul>
+<body onload="loadingAnimation()" style="margin:0;">
+    <div id="loader">
+        <div class="duo duo1">
+            <div class="dot dot-a"></div>
+            <div class="dot dot-b"></div>
+        </div>
+        <div class="duo duo2">
+            <div class="dot dot-a"></div>
+            <div class="dot dot-b"></div>
+        </div>
+    </div>
+
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+
+        <div class="top">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand d-lg-none" href="../index.html">
+                        <img src="../img/mathiasz.png" class="img-fluid" alt="Mathiász logó">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto d-flex justify-content-center">
+                            <li class="nav-item d-inline-flex p-2">
+                                <a class="nav-link active text-center left" aria-current="page"
+                                    href="#">Mezőgazdasági<br>gépész</a>
+                            </li>
+                            <a class="navbar-brand d-none d-lg-block d-inline-flex p-2" href="../index.html">
+                                <img src="../img/mathiasz.png" class="img-fluid" alt="Mathiász logó">
+                            </a>
+                            <li class="nav-item d-inline-flex p-2">
+                                <a class="nav-link text-center" href="k_info.html">Kertész</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+            </nav>
+
+            <header class="container text-center">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="title">Mezőgazdasági gépész</h1>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+        <nav class="navbar navbar-expand-lg"
+            style="z-index: 1; background-color: #016A70; border-top: 0px; border-left: 0px; border-right: 0px;     border-bottom: 5px; border-style: solid; border-color: #EEEEEE;">
+            <div class="container-fluid">
+                <ul class="navbar-nav mx-auto d-flex justify-content-center text-center divider">
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: rgb(255, 0, 0);" id="nav1" onclick="Tractor()">Traktorok</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav2" onclick="Combine_Harvester()">Kombájnok</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav3" onclick="Balers()">Szálastakarmányozó gépek</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav4" onclick="Tillage_Machines()">Talajművelő gépek</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav5" onclick="Seed_Drill()">Vetőgépek</a>
+                    </li>
+                </ul>
             </div>
         </nav>
 
-        <header class="container text-center">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="title">Mezőgazdasági gépész</h1>
+        <main class="container-fluid section-container">
+            <section class="row">
+                <div style="transform: skew(0);" class="col-lg-6 d-flex justify-content-center">
+                    <img id="img1" src="../img/john_deere_1026R.jpg" class="img-fluid content-img" alt="">
                 </div>
-            </div>
-        </header>
+
+                <div style="transform: skew(0);" class="col-lg-6">
+                    <h1 id="title1">John Deere 1026R kompakt traktor</h1>
+                    <p id="text1">Az 1026R univerzális kompakt traktor tökéletes stabilitást és vezetési kényelmet
+                        nyújt.
+                        Ezen a
+                        feladatok széles skálájára tervezett kis kompakt traktoron a munkaeszközök és munkagépek könnyen
+                        és
+                        gyorsan cserélhetők. A standard felszereltség részét képezi a hátul és has alatt lévő
+                        kardántengely,
+                        a hátsó 3 pont felfüggesztés, a hidraulika csatlakozók, a könnyű működtetést elősegítő
+                        hidrosztatikus sebességváltó, a kezelő igényeihez állítható szervokormány és deluxe ülés, a
+                        négykerék hajtás, a differenciálzár és a deluxe lámpakészlet.</p>
+                    <br>
+                    <a class="link" id="link1" target="_blank"
+                        href="https://www.kite.hu/gepek-eszkozok/kornyezetapolasi-berendezesek/john-deere-1026r-kompakt-traktor/11/7">
+                        <h5>Bővebben itt</h5>
+                    </a>
+                </div>
+            </section>
+
+            <section class="row text-end">
+                <div style="transform: skew(0);" class="col-lg-6">
+                    <h1 id="title2">John Deere 3046R kompakt traktor</h1>
+                    <p id="text2">A John Deere 3R sorozatú kompakt traktorokban a fejlett technológiájú funkciók széles
+                        választéka
+                        alapfelszereltségként került beépítésre. Ezek között megtalálható a négykerék hajtás, a
+                        digitális
+                        teljesítménykövető rendszer és a LoadMatch funkció is. Széleskörű felhasználhatóságuknak
+                        köszönhetően hosszútávon, költséghatékonyan alkalmazhatók települések, önkormányzatok
+                        sportpályaápolással, településfenntartással, városgondnoksággal, kommunális feladatok
+                        ellátásával
+                        foglalkozó vállalkozások, kertészetek és gazdálkodók számára egyaránt.</p>
+                    <br>
+                    <a class="link" id="link2" target="_blank"
+                        href="https://www.kite.hu/gepek-eszkozok/traktorok/john-deere-3046r-kompakt-traktor/1/815">
+                        <h5>Bővebben itt</h5>
+                    </a>
+                </div>
+
+                <div style="transform: skew(0);" class="col-lg-6 d-flex justify-content-center">
+                    <img id="img2" src="../img/john_deere_3046R.jpg" class="img-fluid content-img" alt="">
+                </div>
+            </section>
+
+            <section class="row">
+                <div style="transform: skew(0);" class="col-lg-6 d-flex justify-content-center">
+                    <img id="img3" src="../img/john_deere_3038E.jpg" class="img-fluid content-img" alt="">
+                </div>
+
+                <div style="transform: skew(0);" class="col-lg-6">
+                    <h1 id="title3">John Deere 3038E traktor</h1>
+                    <p id="text3">Egy alapkivitelű kompakt traktorral valóban alacsonyabb teljesítményű és képességű
+                        gépet
+                        vásárol? Ha
+                        az egy John Deere E sorozatú traktor, akkor nem. A kedvező árú 3038E könnyű szerrel végrehajt
+                        számos
+                        feladatot. Ez a rátermett, praktikus és gazdaságos traktor Twin Touch pedálokkal, hidrosztatikus
+                        sebességváltóval és 3-pont függesztőszerkezettel rendelkezik. Takarékos üzemeltetési költsége
+                        révén
+                        hasznos eszköze a kertészeti és kisebb állattartó vállalkozásoknak.</p>
+                    <br>
+                    <a class="link" id="link3" target="_blank"
+                        href="https://www.kite.hu/gepek-eszkozok/traktorok/john-deere-3038e-traktor/1/63">
+                        <h5>Bővebben itt</h5>
+                    </a>
+                </div>
+            </section>
+
+            <section class="row text-end">
+                <div style="transform: skew(0);" class="col-lg-6">
+                    <h1 id="title4">John Deere 3045R traktor</h1>
+                    <p id="text4">
+                        A 3R sorozatú traktor teljesítményének maximális kihasználásához a fejlett technológiájú
+                        funkciók
+                        teljes választékát építettük be az alapfelszereltség részeként. Ezek között megtalálható a
+                        négy-kerék hajtás, a digitális teljesítménykövető rendszer és a LoadMatch funkció: egy kiváló
+                        elektromos motorteljesítmény-szabályozó rendszer, amely minden alkalmazásban csúcsteljesítményt
+                        biztosít. A 3 hengeres dízelmotort nagy nyomatékrugalmasság jellemzi, amellyel terhelés alatt is
+                        lenyűgöző vontatási teljesítmény érhető el.</p>
+                    <br>
+                    <a class="link" id="link4" target="_blank"
+                        href="https://www.kite.hu/gepek-eszkozok/traktorok/john-deere-3045r-traktor/1/66">
+                        <h5>Bővebben itt</h5>
+                    </a>
+                </div>
+
+                <div style="transform: skew(0);" class="col-lg-6 d-flex justify-content-center">
+                    <img id="img4" src="../img/john_deere_3045R.jpg" class="img-fluid content-img" alt="">
+                </div>
+            </section>
+
+            <section class="row">
+                <div style="transform: skew(0);" class="col-lg-6 d-flex justify-content-center">
+                    <img id="img5" src="../img/john_deere_4066M.jpg" class="img-fluid content-img" alt="">
+                </div>
+
+                <div style="transform: skew(0);" class="col-lg-6">
+                    <h1 id="title5">John Deere 4066M traktor</h1>
+                    <p id="text5">
+                        A 4M sorozat egy teljes értékű mezőgazdasági traktor erejét és kezelhetőségét nyújtja. A 4
+                        hengeres
+                        dízelmotorral, az eHydro sebességváltóval, a négy-kerék hajtással és az ergonomikus kezelőszerv
+                        konzollal minden az Ön rendelkezésére áll, ami a feladatok széles skálájának hatékony és könnyű
+                        végrehajtásához szükséges. Ez a modell választható manuális ás hidrostatikus váltóval is. Az
+                        erős, 4
+                        hengers dízelmotor megfelelő nyomatékot biztosít meg a nehéz feladatokhoz is.</p>
+                    <br>
+                    <a class="link" id="link5" target="_blank"
+                        href="https://www.kite.hu/gepek-eszkozok/traktorok/john-deere-4066m-traktor/1/68">
+                        <h5>Bővebben itt</h5>
+                    </a>
+                </div>
+            </section>
+
+            <section class="row text-center">
+                <div class="col-lg-12">
+                    <h5>Készítette: Bali Bálint, Vodenicsár Rajmund</h5>
+                    <h6>2023 © Siófoki SZC Mathiász János Technikum és Gimnázium</h6>
+                </div>
+            </section>
+        </main>
+
     </div>
-
-    <nav class="navbar navbar-expand-lg"
-        style="z-index: 1; background-color: #016A70; border-top: 0px; border-left: 0px; border-right: 0px;     border-bottom: 5px; border-style: solid; border-color: #EEEEEE;">
-        <div class="container-fluid">
-            <ul class="navbar-nav mx-auto d-flex justify-content-center text-center divider">
-                <li class="nav-item">
-                    <a class="nav-link" style="color: rgb(255, 0, 0);" id="nav1" onclick="Tractor()">Traktorok</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="nav2" onclick="Combine_Harvester()">Kombájnok</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="nav3" onclick="Balers()">Szálastakarmányozó gépek</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="nav4" onclick="Tillage_Machines()">Talajművelő gépek</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="nav5" onclick="Seed_Drill()">Vetőgépek</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <main class="container-fluid section-container">
-        <section class="row">
-            <div style="transform: skew(0);" class="col-lg-6 d-flex justify-content-center">
-                <img id="img1" src="../img/john_deere_1026R.jpg" class="img-fluid content-img" alt="">
-            </div>
-
-            <div style="transform: skew(0);" class="col-lg-6">
-                <h1 id="title1">John Deere 1026R kompakt traktor</h1>
-                <p id="text1">Az 1026R univerzális kompakt traktor tökéletes stabilitást és vezetési kényelmet nyújt.
-                    Ezen a
-                    feladatok széles skálájára tervezett kis kompakt traktoron a munkaeszközök és munkagépek könnyen és
-                    gyorsan cserélhetők. A standard felszereltség részét képezi a hátul és has alatt lévő kardántengely,
-                    a hátsó 3 pont felfüggesztés, a hidraulika csatlakozók, a könnyű működtetést elősegítő
-                    hidrosztatikus sebességváltó, a kezelő igényeihez állítható szervokormány és deluxe ülés, a
-                    négykerék hajtás, a differenciálzár és a deluxe lámpakészlet.</p>
-                <br>
-                <a class="link" id="link1" target="_blank"
-                    href="https://www.kite.hu/gepek-eszkozok/kornyezetapolasi-berendezesek/john-deere-1026r-kompakt-traktor/11/7">
-                    <h5>Bővebben itt</h5>
-                </a>
-            </div>
-        </section>
-
-        <section class="row text-end">
-            <div style="transform: skew(0);" class="col-lg-6">
-                <h1 id="title2">John Deere 3046R kompakt traktor</h1>
-                <p id="text2">A John Deere 3R sorozatú kompakt traktorokban a fejlett technológiájú funkciók széles
-                    választéka
-                    alapfelszereltségként került beépítésre. Ezek között megtalálható a négykerék hajtás, a digitális
-                    teljesítménykövető rendszer és a LoadMatch funkció is. Széleskörű felhasználhatóságuknak
-                    köszönhetően hosszútávon, költséghatékonyan alkalmazhatók települések, önkormányzatok
-                    sportpályaápolással, településfenntartással, városgondnoksággal, kommunális feladatok ellátásával
-                    foglalkozó vállalkozások, kertészetek és gazdálkodók számára egyaránt.</p>
-                <br>
-                <a class="link" id="link2" target="_blank"
-                    href="https://www.kite.hu/gepek-eszkozok/traktorok/john-deere-3046r-kompakt-traktor/1/815">
-                    <h5>Bővebben itt</h5>
-                </a>
-            </div>
-
-            <div style="transform: skew(0);" class="col-lg-6 d-flex justify-content-center">
-                <img id="img2" src="../img/john_deere_3046R.jpg" class="img-fluid content-img" alt="">
-            </div>
-        </section>
-
-        <section class="row">
-            <div style="transform: skew(0);" class="col-lg-6 d-flex justify-content-center">
-                <img id="img3" src="../img/john_deere_3038E.jpg" class="img-fluid content-img" alt="">
-            </div>
-
-            <div style="transform: skew(0);" class="col-lg-6">
-                <h1 id="title3">John Deere 3038E traktor</h1>
-                <p id="text3">Egy alapkivitelű kompakt traktorral valóban alacsonyabb teljesítményű és képességű gépet
-                    vásárol? Ha
-                    az egy John Deere E sorozatú traktor, akkor nem. A kedvező árú 3038E könnyű szerrel végrehajt számos
-                    feladatot. Ez a rátermett, praktikus és gazdaságos traktor Twin Touch pedálokkal, hidrosztatikus
-                    sebességváltóval és 3-pont függesztőszerkezettel rendelkezik. Takarékos üzemeltetési költsége révén
-                    hasznos eszköze a kertészeti és kisebb állattartó vállalkozásoknak.</p>
-                <br>
-                <a class="link" id="link3" target="_blank"
-                    href="https://www.kite.hu/gepek-eszkozok/traktorok/john-deere-3038e-traktor/1/63">
-                    <h5>Bővebben itt</h5>
-                </a>
-            </div>
-        </section>
-
-        <section class="row text-end">
-            <div style="transform: skew(0);" class="col-lg-6">
-                <h1 id="title4">John Deere 3045R traktor</h1>
-                <p id="text4">
-                    A 3R sorozatú traktor teljesítményének maximális kihasználásához a fejlett technológiájú funkciók
-                    teljes választékát építettük be az alapfelszereltség részeként. Ezek között megtalálható a
-                    négy-kerék hajtás, a digitális teljesítménykövető rendszer és a LoadMatch funkció: egy kiváló
-                    elektromos motorteljesítmény-szabályozó rendszer, amely minden alkalmazásban csúcsteljesítményt
-                    biztosít. A 3 hengeres dízelmotort nagy nyomatékrugalmasság jellemzi, amellyel terhelés alatt is
-                    lenyűgöző vontatási teljesítmény érhető el.</p>
-                <br>
-                <a class="link" id="link4" target="_blank"
-                    href="https://www.kite.hu/gepek-eszkozok/traktorok/john-deere-3045r-traktor/1/66">
-                    <h5>Bővebben itt</h5>
-                </a>
-            </div>
-
-            <div style="transform: skew(0);" class="col-lg-6 d-flex justify-content-center">
-                <img id="img4" src="../img/john_deere_3045R.jpg" class="img-fluid content-img" alt="">
-            </div>
-        </section>
-
-        <section class="row">
-            <div style="transform: skew(0);" class="col-lg-6 d-flex justify-content-center">
-                <img id="img5" src="../img/john_deere_4066M.jpg" class="img-fluid content-img" alt="">
-            </div>
-
-            <div style="transform: skew(0);" class="col-lg-6">
-                <h1 id="title5">John Deere 4066M traktor</h1>
-                <p id="text5">
-                    A 4M sorozat egy teljes értékű mezőgazdasági traktor erejét és kezelhetőségét nyújtja. A 4 hengeres
-                    dízelmotorral, az eHydro sebességváltóval, a négy-kerék hajtással és az ergonomikus kezelőszerv
-                    konzollal minden az Ön rendelkezésére áll, ami a feladatok széles skálájának hatékony és könnyű
-                    végrehajtásához szükséges. Ez a modell választható manuális ás hidrostatikus váltóval is. Az erős, 4
-                    hengers dízelmotor megfelelő nyomatékot biztosít meg a nehéz feladatokhoz is.</p>
-                <br>
-                <a class="link" id="link5" target="_blank"
-                    href="https://www.kite.hu/gepek-eszkozok/traktorok/john-deere-4066m-traktor/1/68">
-                    <h5>Bővebben itt</h5>
-                </a>
-            </div>
-        </section>
-
-        <section class="row text-center">
-            <div class="col-lg-12">
-                <h5>Készítette: Bali Bálint, Vodenicsár Rajmund</h5>
-                <h6>2023 © Siófoki SZC Mathiász János Technikum és Gimnázium</h6>
-            </div>
-        </section>
-    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
