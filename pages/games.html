@@ -26,7 +26,8 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body onload="loadingAnimation()" style="margin:0;" onkeypress="KeyPress(event)" onkeydown="OtherPress(event)" id="body"> <!--game2-->
+<body onload="loadingAnimation()" style="margin:0;" onkeypress="KeyPress(event)" onkeydown="OtherPress(event)"
+    id="body"> <!--game2-->
     <div id="loader">
         <div class="duo duo1">
             <div class="dot dot-a"></div>
@@ -160,18 +161,16 @@
                         </div>
 
                         <div id="scoreboard" style="display: none;">
-
+                            <p id="yourscore">
+                                A pontszámod:
+                            </p>
                             <p id="out">
 
-                            </p>
-
-                            <p id="yourscore">
-                                itt a scoreod
                             </p>
                             <div id="regcon">
 
                                 <p>
-                                    ide a neved pls:
+                                    Kérlek add meg a neved:
                                 </p>
                                 <input type="input" id="yourname">
                                 <input type="button" value="Rajmund" onclick="Rajmund()">

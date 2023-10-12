@@ -1,12 +1,12 @@
 let temp;
 
 function loadingAnimation() {
-  temp = setTimeout(showPage, 1000);
+    temp = setTimeout(showPage, 1000);
 }
 
 function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("content").style.display = "block";
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("content").style.display = "block";
 }
 
 function Tractor() {
@@ -172,4 +172,37 @@ function Seed_Drill() {
     document.getElementById("title5").innerText = "John Deere 1775NT ExactEmerge szemenkénti vetőgép"
     document.getElementById("text5").innerText = "A John Deere vetőgépcsaládjának egyik zászlóshajója a John Deere 1775NT ExactEmerge szemenkénti vetőgép. A vetőgép kialakítása, tömege révén szélsőséges viszonyok között is pontos vetést és egyenletesen kelő növényállományt biztosít hagyományos és csökkentett menetszámú talajművelés esetén, de akár direktvetésben is. A vetés még nagy munkasebességnél is pontosan elvégezhető, nagy termelékenységet biztosítva (100 ha/vetőelem egy szezonban)."
     document.getElementById("link5").href = 'https://www.kite.hu/gepek-eszkozok/vetogepek/john-deere-1775nt-exactemerge-szemenkenti-vetogep/5/452'
+}
+
+function Ornamental_Grasses() {
+    document.getElementById("nav1").style.color = 'rgb(255, 0, 0)';
+    document.getElementById("nav2").style.color = '#EEEEEE';
+    document.getElementById("nav3").style.color = '#EEEEEE';
+    document.getElementById("nav4").style.color = '#EEEEEE';
+    document.getElementById("nav5").style.color = '#EEEEEE';
+
+    document.getElementById("img1").src = '../img/zebra_aranybambusz.jpg'
+    document.getElementById("title1").innerText = "Zebra aranybambusz (Pleioblastus auricoma)"
+    document.getElementById("text1").innerText = "Származása. Közép-Kína. Tömött bokrú törpe bambusz. Levelei sárgás zöldek. Első pár évben télen takarást igényel."
+    document.getElementById("link1").href = 'https://oazis.hu/disznovenyek/zebra-aranybambusz/'
+
+    document.getElementById("img2").src = '../img/zebrafu.jpg'
+    document.getElementById("title2").innerText = "Zebrafű (Miscanthus sinensis, Zebrinus)"
+    document.getElementById("text2").innerText = "Későn hajt ki. Zöld leveleit sárga kereszt csíkok díszítik. Száraz talajban a levelei vége vissza száradnak. Száraz leveleit tavasszal vágjuk vissza."
+    document.getElementById("link2").href = 'https://oazis.hu/disznovenyek/zebrafu/'
+
+    document.getElementById("img3").src = '../img/vesszos_koles.jpg'
+    document.getElementById("title3").innerText = "Vesszős köles (Panicum virgatum, Heavy Matel)"
+    document.getElementById("text3").innerText = "Oszlopos növekedésű. Levelei acél kékek felállók, ősszel sárgára színeződnek."
+    document.getElementById("link3").href = 'https://oazis.hu/disznovenyek/vesszos-koles/'
+
+    document.getElementById("img4").src = '../img/john_deere_3045R.jpg'
+    document.getElementById("title4").innerText = "John Deere 3045R traktor"
+    document.getElementById("text4").innerText = "A 3R sorozatú traktor teljesítményének maximális kihasználásához a fejlett technológiájú funkciók teljes választékát építettük be az alapfelszereltség részeként. Ezek között megtalálható a négy-kerék hajtás, a digitális teljesítménykövető rendszer és a LoadMatch funkció: egy kiváló elektromos motorteljesítmény-szabályozó rendszer, amely minden alkalmazásban csúcsteljesítményt biztosít. A 3 hengeres dízelmotort nagy nyomatékrugalmasság jellemzi, amellyel terhelés alatt is lenyűgöző vontatási teljesítmény érhető el."
+    document.getElementById("link4").href = 'https://www.kite.hu/gepek-eszkozok/traktorok/john-deere-3045r-traktor/1/66'
+
+    document.getElementById("img5").src = '../img/john_deere_4066M.jpg'
+    document.getElementById("title5").innerText = "John Deere 4066M traktor"
+    document.getElementById("text5").innerText = "A 4M sorozat egy teljes értékű mezőgazdasági traktor erejét és kezelhetőségét nyújtja. A 4 hengeres dízelmotorral, az eHydro sebességváltóval, a négy-kerék hajtással és az ergonomikus kezelőszerv konzollal minden az Ön rendelkezésére áll, ami a feladatok széles skálájának hatékony és könnyű végrehajtásához szükséges. Ez a modell választható manuális ás hidrostatikus váltóval is. Az erős, 4 hengers dízelmotor megfelelő nyomatékot biztosít meg a nehéz feladatokhoz is."
+    document.getElementById("link5").href = 'https://www.kite.hu/gepek-eszkozok/traktorok/john-deere-4066m-traktor/1/68'
 }
