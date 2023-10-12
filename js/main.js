@@ -196,13 +196,13 @@ function Ornamental_Grasses() {
     document.getElementById("text3").innerText = "Oszlopos növekedésű. Levelei acél kékek felállók, ősszel sárgára színeződnek."
     document.getElementById("link3").href = 'https://oazis.hu/disznovenyek/vesszos-koles/'
 
-    document.getElementById("img4").src = '../img/john_deere_3045R.jpg'
-    document.getElementById("title4").innerText = "John Deere 3045R traktor"
-    document.getElementById("text4").innerText = "A 3R sorozatú traktor teljesítményének maximális kihasználásához a fejlett technológiájú funkciók teljes választékát építettük be az alapfelszereltség részeként. Ezek között megtalálható a négy-kerék hajtás, a digitális teljesítménykövető rendszer és a LoadMatch funkció: egy kiváló elektromos motorteljesítmény-szabályozó rendszer, amely minden alkalmazásban csúcsteljesítményt biztosít. A 3 hengeres dízelmotort nagy nyomatékrugalmasság jellemzi, amellyel terhelés alatt is lenyűgöző vontatási teljesítmény érhető el."
-    document.getElementById("link4").href = 'https://www.kite.hu/gepek-eszkozok/traktorok/john-deere-3045r-traktor/1/66'
+    document.getElementById("img4").src = '../img/viragosnad.jpg'
+    document.getElementById("title4").innerText = "Virágosnád, molnárpántlika (Miscanthus sinensis, Gracillimus)"
+    document.getElementById("text4").innerText = "Származása. Kelet-Ázsia. Későn áprilisban hajt ki. Levelei matt zöldek, ezüstös középpel, ősszel vörösre színeződik. Tó és patak partokra ültethető."
+    document.getElementById("link4").href = 'https://oazis.hu/disznovenyek/viragosnadmolnarpantlika/'
 
-    document.getElementById("img5").src = '../img/john_deere_4066M.jpg'
-    document.getElementById("title5").innerText = "John Deere 4066M traktor"
-    document.getElementById("text5").innerText = "A 4M sorozat egy teljes értékű mezőgazdasági traktor erejét és kezelhetőségét nyújtja. A 4 hengeres dízelmotorral, az eHydro sebességváltóval, a négy-kerék hajtással és az ergonomikus kezelőszerv konzollal minden az Ön rendelkezésére áll, ami a feladatok széles skálájának hatékony és könnyű végrehajtásához szükséges. Ez a modell választható manuális ás hidrostatikus váltóval is. Az erős, 4 hengers dízelmotor megfelelő nyomatékot biztosít meg a nehéz feladatokhoz is."
-    document.getElementById("link5").href = 'https://www.kite.hu/gepek-eszkozok/traktorok/john-deere-4066m-traktor/1/68'
+    document.getElementById("img5").src = '../img/torpe_bambusz.jpg'
+    document.getElementById("title5").innerText = "Törpe bambusz (Pleioblastus fortunei, Variegata)"
+    document.getElementById("text5").innerText = "0,5 méterre növő fajta. Levelein hosszanti fehér csíkokkal."
+    document.getElementById("link5").href = 'https://oazis.hu/disznovenyek/torpe-bambusz/'
 }
