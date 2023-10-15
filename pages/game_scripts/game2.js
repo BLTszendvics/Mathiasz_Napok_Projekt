@@ -60,7 +60,7 @@ function Load2() {
 
     letterNumber = w.length;
 
-    document.getElementById("wordlenumber").innerHTML = letterNumber;
+    document.getElementById("wordlenumber").innerHTML = letterNumber + "\t" + "karakter";
 
 }
 

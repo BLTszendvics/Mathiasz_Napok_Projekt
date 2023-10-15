@@ -183,7 +183,7 @@ function Ornamental_Grasses() {
 
     document.getElementById("img1").src = '../img/zebra_aranybambusz.jpg'
     document.getElementById("title1").innerText = "Zebra aranybambusz (Pleioblastus auricoma)"
-    document.getElementById("text1").innerText = "Származása. Közép-Kína. Tömött bokrú törpe bambusz. Levelei sárgás zöldek. Első pár évben télen takarást igényel."
+    document.getElementById("text1").innerText = "Származása: Közép-Kína. Tömött bokrú törpe bambusz. Levelei sárgás zöldek. Első pár évben télen takarást igényel."
     document.getElementById("link1").href = 'https://oazis.hu/disznovenyek/zebra-aranybambusz/'
 
     document.getElementById("img2").src = '../img/zebrafu.jpg'
@@ -198,7 +198,7 @@ function Ornamental_Grasses() {
 
     document.getElementById("img4").src = '../img/viragosnad.jpg'
     document.getElementById("title4").innerText = "Virágosnád, molnárpántlika (Miscanthus sinensis, Gracillimus)"
-    document.getElementById("text4").innerText = "Származása. Kelet-Ázsia. Későn áprilisban hajt ki. Levelei matt zöldek, ezüstös középpel, ősszel vörösre színeződik. Tó és patak partokra ültethető."
+    document.getElementById("text4").innerText = "Származása: Kelet-Ázsia. Későn áprilisban hajt ki. Levelei matt zöldek, ezüstös középpel, ősszel vörösre színeződik. Tó és patak partokra ültethető."
     document.getElementById("link4").href = 'https://oazis.hu/disznovenyek/viragosnadmolnarpantlika/'
 
     document.getElementById("img5").src = '../img/torpe_bambusz.jpg'
@@ -236,7 +236,7 @@ function Spices_and_Herbs() {
 
     document.getElementById("img5").src = '../img/rebarbara.jpg'
     document.getElementById("title5").innerText = "Rebarbara (Rheum rhabarbarum)"
-    document.getElementById("text5").innerText = "Terjedelmes bokrot alkotó évelő növény.Napos helyet és tápanyagban gazdag talajt igényel.Telepítést követő harmadik évtől szedhetők levelei márciustól májusig. Levélnyele 30-60 cm hosszú."
+    document.getElementById("text5").innerText = "Terjedelmes bokrot alkotó évelő növény. Napos helyet és tápanyagban gazdag talajt igényel. Telepítést követő harmadik évtől szedhetők levelei márciustól májusig. Levélnyele 30-60 cm hosszú."
     document.getElementById("link5").href = 'https://oazis.hu/disznovenyek/rebarbara/'
 }
 
@@ -249,27 +249,27 @@ function Bulbs() {
 
     document.getElementById("img1").src = '../img/vervirag.jpg'
     document.getElementById("title1").innerText = "Vérvirág (Scadoxus multiflorus)"
-    document.getElementById("text1").innerText = "Hagymás fagyérzékeny évelő.Piros virágai gömb alakú ernyő virágzatot alkotnak.Tavasszal fiókhagymákkal szaporítható."
+    document.getElementById("text1").innerText = "Hagymás fagyérzékeny évelő. Piros virágai gömb alakú ernyő virágzatot alkotnak. Tavasszal fiókhagymákkal szaporítható."
     document.getElementById("link1").href = 'https://oazis.hu/disznovenyek/vervirag/'
 
     document.getElementById("img2").src = '../img/tulipan.jpg'
     document.getElementById("title2").innerText = "Tulipán (Tulipa Concerto)"
-    document.getElementById("text2").innerText = "Forsteriana hibrid.Kora tavasszal virágzó,virágai egyszerűek,napon kiterülők.Levelei foltosak vagy csíkosak.Virága fehér színű.Törpe változat sziklakertek beéltetésére, temetőbe alkalmas fajta.Ősz időszakban hagymás kiszerelésben áruljuk."
+    document.getElementById("text2").innerText = "Forsteriana hibrid. Kora tavasszal virágzó, virágai egyszerűek, napon kiterülők. Levelei foltosak vagy csíkosak. Virága fehér színű. Törpe változat sziklakertek beéltetésére, temetőbe alkalmas fajta. Ősz időszakban hagymás kiszerelésben áruljuk."
     document.getElementById("link2").href = 'https://oazis.hu/disznovenyek/tulipan-37/'
 
     document.getElementById("img3").src = '../img/trombitas_narcisz.jpg'
     document.getElementById("title3").innerText = "Trombitás nárcisz (Narcissus Dutch Master)"
-    document.getElementById("text3").innerText = "Magányos nagy virágú fajta,Tavasz elejétől végéig nyílnak, sárga trombita formájú virágai. Magassága 45 cm."
+    document.getElementById("text3").innerText = "Magányos nagy virágú fajta, Tavasz elejétől végéig nyílnak, sárga trombita formájú virágai. Magassága 45 cm."
     document.getElementById("link3").href = 'https://oazis.hu/disznovenyek/trombitas-narcisz/'
 
     document.getElementById("img4").src = '../img/torpe_daliak.jpg'
     document.getElementById("title4").innerText = "Törpe dáliák (Dahlia Topmix pink)"
-    document.getElementById("text4").innerText = "Törpe dália,20-40 cm magas.Kőedények, dalnokládák beültetésére alkalmas.Teleltetést igényel."
+    document.getElementById("text4").innerText = "Törpe dália, 20-40 cm magas. Kőedények, dalnokládák beültetésére alkalmas. Teleltetést igényel."
     document.getElementById("link4").href = 'https://oazis.hu/disznovenyek/torpe-daliak/'
 
     document.getElementById("img5").src = '../img/trombitaviragu_liliom.jpg'
     document.getElementById("title5").innerText = "Trombitavirágú liliom (Lilium African Queen)"
-    document.getElementById("text5").innerText = "Nyáron virágzó hagymás.Levelei lándzsa alakúak.Nagy virágai narancssárgák.Hagymás kiszerelésben lapható.Évelőágyak háttér növényének ültethető, 120-150 cm magas.Egyszerre 8-12 virágot is hoz."
+    document.getElementById("text5").innerText = "Nyáron virágzó hagymás. Levelei lándzsa alakúak. Nagy virágai narancssárgák. Hagymás kiszerelésben lapható. Évelőágyak háttér növényének ültethető, 120-150 cm magas. Egyszerre 8-12 virágot is hoz."
     document.getElementById("link5").href = 'https://oazis.hu/disznovenyek/trombitaviragu-liliom/'
 }
 
@@ -282,27 +282,27 @@ function Aquatic_Plants() {
 
     document.getElementById("img1").src = '../img/vizi_harmatkasa.jpg'
     document.getElementById("title1").innerText = "Vízi harmatkása (Glyceria maxima, Variegata)"
-    document.getElementById("text1").innerText = "Levelei szélesek,hosszúkásak,krémszínű csíkokkal.Gyors növekedésű évelő.Tóparti sekély vizekbe ültethető. Vízmélység:5-20 cm"
+    document.getElementById("text1").innerText = "Levelei szélesek, hosszúkásak, krémszínű csíkokkal. Gyors növekedésű évelő. Tóparti sekély vizekbe ültethető. Vízmélység: 5-20 cm"
     document.getElementById("link1").href = 'https://oazis.hu/disznovenyek/vizi-harmatkasa/'
 
     document.getElementById("img2").src = '../img/vizi_hidor.jpg'
     document.getElementById("title2").innerText = "Vízi hídőr (Alisma plantago-aquatica)"
-    document.getElementById("text2").innerText = "Sekély vízben él. Levelei élénkzöldek,a víz fölé emelkednek.Virágzata,rózsaszín,kunkorszerű,nagy laza bugában nyáron jelennek meg."
+    document.getElementById("text2").innerText = "Sekély vízben él. Levelei élénkzöldek, a víz fölé emelkednek. Virágzata, rózsaszín, kunkorszerű, nagy laza bugában nyáron jelennek meg."
     document.getElementById("link2").href = 'https://oazis.hu/disznovenyek/vizi-hidor/'
 
     document.getElementById("img3").src = '../img/vizi_jacint.jpg'
     document.getElementById("title3").innerText = "Vizi jácint (Eichhornia crassipes)"
-    document.getElementById("text3").innerText = "Levél nyele hólyag szerűen felfújódott,viaszosak így úsznak a vízen. Hosszú gyökerei belelógnak a vízbe.Virágai lilák augusztusban nyílnak.Teleltetéséről gondoskodni kell."
+    document.getElementById("text3").innerText = "Levél nyele hólyag szerűen felfújódott, viaszosak így úsznak a vízen. Hosszú gyökerei belelógnak a vízbe. Virágai lilák augusztusban nyílnak. Teleltetéséről gondoskodni kell."
     document.getElementById("link3").href = 'https://oazis.hu/disznovenyek/vizi-jacint/'
 
     document.getElementById("img4").src = '../img/vizi_menta.jpg'
     document.getElementById("title4").innerText = "Vizi menta (Mentha aquatica)"
-    document.getElementById("text4").innerText = "Származása:Ázsia.Erősen tarackozó szárú aromás évelő.Levelei tojásdadok szélük fűrészes.Virágai lila fejecske virágzatba tömörülnek. Vízmélység:10 cm."
+    document.getElementById("text4").innerText = "Származása: Ázsia. Erősen tarackozó szárú aromás évelő. Levelei tojásdadok szélük fűrészes. Virágai lila fejecske virágzatba tömörülnek. Vízmélység: 10 cm."
     document.getElementById("link4").href = 'https://oazis.hu/disznovenyek/vizi-menta/'
 
     document.getElementById("img5").src = '../img/vizi_noszirom.jpg'
     document.getElementById("title5").innerText = "Vízi nőszirom (Iris versicolor)"
-    document.getElementById("text5").innerText = "Levelei keskenyebbek mint a többi írisz fajtáé.Virágai kékek,ezüst és arany pöttyösek ,szirmaik keskenyek.Virágait júliustól hozza. Vízmélység.5-10 cm."
+    document.getElementById("text5").innerText = "Levelei keskenyebbek mint a többi írisz fajtáé. Virágai kékek, ezüst és arany pöttyösek, szirmaik keskenyek. Virágait júliustól hozza. Vízmélység: 5-10 cm."
     document.getElementById("link5").href = 'https://oazis.hu/disznovenyek/vizi-noszirom/'
 }
 
@@ -315,26 +315,26 @@ function Evergreens() {
 
     document.getElementById("img1").src = '../img/zold_henyeboroka.jpg'
     document.getElementById("title1").innerText = "Zöld henyeboróka (Juniperus Horizontalis, Prince of Wales)"
-    document.getElementById("text1").innerText = "30 cm magas terülő boróka. Levelei zöldek. Humuszos talajt igényel. Sziklakertbe, talajtakarónak,ültethető."
+    document.getElementById("text1").innerText = "30 cm magas terülő boróka. Levelei zöldek. Humuszos talajt igényel. Sziklakertbe, talajtakarónak, ültethető."
     document.getElementById("link1").href = 'https://oazis.hu/disznovenyek/zold-henyeboroka/'
 
     document.getElementById("img2").src = '../img/zold_oszlopos_tiszafa.jpg'
     document.getElementById("title2").innerText = "Zöld oszlopos tiszafa (Taxus x media Hicksii)"
-    document.getElementById("text2").innerText = "Oszlopos növekedésű, 6 méter magasságot is elérő fajta. A nőivarú változat nagyon sok termést hoz.Idősebb korban koronája széthajló."
+    document.getElementById("text2").innerText = "Oszlopos növekedésű, 6 méter magasságot is elérő fajta. A nőivarú változat nagyon sok termést hoz. Idősebb korban koronája széthajló."
     document.getElementById("link2").href = 'https://oazis.hu/disznovenyek/zold-oszlopos-tiszafa/'
 
     document.getElementById("img3").src = '../img/wilson_magyal.jpg'
     document.getElementById("title3").innerText = "Wilson magyal (Ilex x altaclerensis Wilsonii)"
-    document.getElementById("text3").innerText = "4 méter magas kúp koronájú. A vessző végi levelei ép szélűek,ősszel bronzossá válnak."
+    document.getElementById("text3").innerText = "4 méter magas kúp koronájú. A vessző végi levelei ép szélűek, ősszel bronzossá válnak."
     document.getElementById("link3").href = 'https://oazis.hu/disznovenyek/wilson-magyal/'
 
     document.getElementById("img4").src = '../img/virginiai_boroka.jpg'
     document.getElementById("title4").innerText = "Virginiai boróka (Juniperus virginiana Blue Arrow)"
-    document.getElementById("text4").innerText = "Keskeny oszlopos növekedésű, kék lombú fajta.5-6 méter magas.Atkásodásra nem hajlamos."
+    document.getElementById("text4").innerText = "Keskeny oszlopos növekedésű, kék lombú fajta. 5-6 méter magas. Atkásodásra nem hajlamos."
     document.getElementById("link4").href = 'https://oazis.hu/disznovenyek/virginiai-boroka/'
 
     document.getElementById("img5").src = '../img/tuztovis.jpg'
     document.getElementById("title5").innerText = "Tűztövis (Pyracantha, Orange Charmer)"
-    document.getElementById("text5").innerText = "2 méter magas felfelé álló ágú,örökzöld cserje.Fehér virágait bugákban hozza.Termése tömegesen jelennek meg,sötét narancssárga színben."
+    document.getElementById("text5").innerText = "2 méter magas felfelé álló ágú, örökzöld cserje. Fehér virágait bugákban hozza. Termése tömegesen jelennek meg, sötét narancssárga színben."
     document.getElementById("link5").href = 'https://oazis.hu/disznovenyek/tuztovis-4/'
 }
