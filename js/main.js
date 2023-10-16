@@ -1,7 +1,7 @@
-let time;
+let temp;
 
 function loadingAnimation() {
-    time = setTimeout(showPage, 1000);
+    temp = setTimeout(showPage, 1000);
 }
 
 function showPage() {
