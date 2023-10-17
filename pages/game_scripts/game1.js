@@ -84,6 +84,9 @@ var imageMainSize;
 var mx;
 var my;
 
+var kmsX;
+var kmsY;
+
 function Load1() {
 
     imgr = shuffle(imgr);
@@ -104,80 +107,111 @@ function LoadSizes() {
     wX = ww.x + window.scrollX;
     wY = ww.y + window.scrollY;
 
+    let t = document.getElementById("game1").getBoundingClientRect();
+
+    kmsX = t.left;
+    kmsY = t.top;
+
     LoadThings();
 
 }
 
 function LoadThings() {
 
-    // responsivity
-    if (wWidth < 600) {
+    let imageGap;
 
-        imageSize = (wWidth/5*2) * 2 / size;
+    // responsivity
+    if (wWidth < 800) {
+
+        imageGap = 10;
+
+        imageSize = wWidth / 6;
+
+        let imagesWidth = size * (imageSize + imageGap) - imageGap;
+
+        imageMainSize = size * imageSize;
+
+        let gameHeight = imagesWidth + imageMainSize + imageGap * 5;
+
+        imageMainX = (wWidth - (size) * imageSize) / 2 + kmsX;
+        imageMainY = imageMainSize + imageGap*7 + kmsY;
+
+        let i = document.getElementById("imgmain");
+
+        i.style.left = imageMainX - kmsX + "px";
+        i.style.top = imageMainY - kmsY + "px";
+        i.style.width = imageMainSize + "px";
+        i.style.height = imageMainSize + "px";
+
+        spawnPos[0] = (wWidth - imagesWidth)/2;
+        spawnPos[1] = imageGap*2; //imageMainY - ydif
+
+        spawnPos[2] = size;
+        spawnPos[3] = imageGap;
+
+        document.getElementById("game1").style.height = gameHeight + "px";
 
     }
     else if (wWidth < 1000) {
 
-        imageSize = (wWidth/4) * 2 / size;
+        imageGap = 10;
 
-    }
-    else {
+        imageSize = wWidth / 12;
 
-        imageSize = (wWidth/6) * 2 / size;
+        let imagesWidth = size * (imageSize + imageGap) - imageGap;
 
-    }
+        let gameHeight = imagesWidth + imageGap * 2;
 
-    let imageGap = 20;
+        imageMainSize = size * imageSize;
 
-    imageMainSize = size * imageSize;
+        imageMainX = wWidth / 2 + (wWidth / 2 - (size) * imageSize) / 2 + kmsX;
+        imageMainY = (gameHeight - imageMainSize) / 2 + kmsY;
 
-    let heightDiffs = (wHeight - (imageMainSize + imageSize)) / 3;
+        let i = document.getElementById("imgmain");
 
-    
-    imageMainX = wWidth / 2 + (wWidth / 2 - (size) * imageSize) / 2;
-    //(wWidth-(size)*imageSize) / 2;
-    imageMainY = wY + heightDiffs;
-    
-
-
-    let i = document.getElementById("imgmain");
-
-    i.style.left = imageMainX + "px";
-    i.style.top = imageMainY + "px";
-    i.style.width = imageMainSize + "px";
-    i.style.height = imageMainSize + "px";
-
-    //
-
-    let veryspecialsize = imageMainSize + wY + heightDiffs * 3;
-
-    //
-
-    let e = size*size;
-    let imagesWidth = e * (imageSize + imageGap) - imageGap;
-
-    while (e >= 1 && imagesWidth > wWidth/2) {
-
-        e /= 2;
-
-        imagesWidth = e * (imageSize + imageGap) - imageGap;
-
-    }
-
-    let ydif = (imagesWidth - imageMainSize) / 2; 
-
-    if (e < 1) {
-
-        console.log("BAJBAJBAJBJABJABAJBAJBAJBJABJABJAJBAJBAJBAJBAJBAJ");
-
-    }
-    else {
+        i.style.left = imageMainX - kmsX + "px";
+        i.style.top = imageMainY - kmsY + "px";
+        i.style.width = imageMainSize + "px";
+        i.style.height = imageMainSize + "px";
 
         spawnPos[0] = (wWidth/2 - imagesWidth)/2;
-        spawnPos[1] = imageMainY - ydif;
+        spawnPos[1] = imageGap; //imageMainY - ydif
 
-        spawnPos[2] = e;
+        spawnPos[2] = size;
         spawnPos[3] = imageGap;
+
+        document.getElementById("game1").style.height = gameHeight + "px";
+
+    }
+    else {
+
+        imageGap = 20;
+
+        imageSize = wWidth / 12;
+
+        let imagesWidth = size * (imageSize + imageGap) - imageGap;
+
+        let gameHeight = imagesWidth + imageGap * 2;
+
+        imageMainSize = size * imageSize;
+
+        imageMainX = wWidth / 2 + (wWidth / 2 - (size) * imageSize) / 2 + kmsX;
+        imageMainY = (gameHeight - imageMainSize) / 2 + kmsY;
+
+        let i = document.getElementById("imgmain");
+
+        i.style.left = imageMainX - kmsX + "px";
+        i.style.top = imageMainY - kmsY + "px";
+        i.style.width = imageMainSize + "px";
+        i.style.height = imageMainSize + "px";
+
+        spawnPos[0] = (wWidth/2 - imagesWidth)/2;
+        spawnPos[1] = imageGap; //imageMainY - ydif
+
+        spawnPos[2] = size;
+        spawnPos[3] = imageGap;
+
+        document.getElementById("game1").style.height = gameHeight + "px";
 
     }
 
@@ -214,7 +248,7 @@ function Spawn() {
         g.style.left = x2 + "px";
         g.style.top = y2 + "px";
 
-        let j = new Img(o, ((x+1)*10)+y+1, x2, y2, ('./game_images/image' + imgn + '/img_' + y + '_' + x + '.png')); //'images/image1/i0.png'
+        let j = new Img(o, ((x+1)*10)+y+1, x2+kmsX, y2+kmsY, ('./game_images/image' + imgn + '/img_' + y + '_' + x + '.png')); //'images/image1/i0.png'
 
         Imgs.push(j);
 
@@ -240,6 +274,12 @@ function MouseMove(m) {
         Move(mx, my, iIndex)
 
     }
+
+}
+
+function test0(m) {
+
+    //console.log(m.clientX + " " + m.clientY);
 
 }
 
@@ -293,7 +333,7 @@ function MouseUp(m, iIndex) {
             let ix = (mx - imageMainX) - (mx - imageMainX) % imageSize;
             let iy = (my - imageMainY) - (my - imageMainY) % imageSize;
             
-            let x = ix + imageMainX + imageSize/2;
+            let x = ix + imageMainX + imageSize / 2;
             let y = iy + imageMainY + imageSize / 2;
             
             let mapx = ix / imageSize;
@@ -340,8 +380,10 @@ function MouseUp(m, iIndex) {
 
 function Move(x, y, i) {
 
-    o(Imgs[i].Obj).style.left = (x - imageSize / 2) + "px";
-    o(Imgs[i].Obj).style.top = (y - imageSize / 2) + "px";
+    //console.log(document.getElementById("games").getBoundingClientRect().top);
+    //(x - imageSize / 2)
+    o(Imgs[i].Obj).style.left = (x - imageSize / 2) - kmsX + "px";
+    o(Imgs[i].Obj).style.top = (y - imageSize / 2) - kmsY + "px";
     
 }
 
