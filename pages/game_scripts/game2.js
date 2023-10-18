@@ -1,10 +1,48 @@
 let allWords = [
-
     "ÁRPA",
     "KUKORICA",
     "KOMBÁJN",
     "TRAKTOR",
-    "MOTOR"
+    "MOTOR",
+    "ALANY",
+    "ADALÉKANYAG",
+    "ARBORÉTUM",
+    "ÁGYÁS",
+    "BUJTÁS",
+    "BAKHÁT",
+    "DÍSZNÖVÉNY",
+    "DUGVÁNY",
+    "GYOMLÁLÁS",
+    "HIBRID",
+    "HÓNALJRÜGY",
+    "INDA",
+    "LOMBTRÁGYA",
+    "MULCSOZÁS",
+    "OLTÁS",
+    "REZISZTENCIA",
+    "SARJ",
+    "SZIKLEVÉL",
+    "VETÉSFORGÓ",
+    "VETÉS",
+    "EKEFEJ",
+    "EKETALP",
+    "SORTÁVOLSÁG",
+    "CSOROSZLYA",
+    "NYOMJELZŐ",
+    "HENGER",
+    "DUGATTYÚ",
+    "OLVADÁSPONT",
+    "KOVALENS",
+    "RIDEGSÉG",
+    "EUTEKTOID",
+    "AUSZTENIT",
+    "TŰRÉS",
+    "ABS",
+    "ÉKSZÍJ",
+    "MOTORBLOKK",
+    "LEFÚJÓSZELEP",
+    "OKTÁNSZÁM",
+    "DIFFERENCIÁLMŰ"
 ]
 
 let word = [];
@@ -26,7 +64,7 @@ let letterMiddle = '"><p style="text-align: center; vertical-align: middle;">';
 let letterEnd = '</p></div></div>';*/
 
 let letterText = [
-    
+
     '<div style="padding:10px; display: flex;"><div style="width:',
     'px; height: ',
     'px; font-size: 30px; background-color:',
@@ -49,7 +87,7 @@ function Load2() {
 
     letterSize = document.getElementById("body").offsetWidth / 16;
 
-    let i = Math.floor(Math.random()*allWords.length);
+    let i = Math.floor(Math.random() * allWords.length);
     let w = allWords[i];
 
     for (let e = 0; e < w.length; e++) {
@@ -79,18 +117,18 @@ function KeyPress(e) {
     if (loaded) {
 
         let enter = 13;
-    
+
         let c = e.keyCode;
-    
+
         if (c == enter) {
-    
+
             Enter();
-    
+
         }
         else if (CheckLetter(c)) {
-    
+
             document.getElementById("word").value += e.key;
-    
+
         }
 
     }
@@ -98,7 +136,7 @@ function KeyPress(e) {
 }
 
 function Enter() {
-    
+
     if (document.getElementById("word").value.length >= letterNumber) {
 
         CheckW(document.getElementById("word").value);
@@ -135,7 +173,7 @@ function CheckW(ww) {
 
         if (letterList[f] == null) {
 
-            letterList[f] = 1;    
+            letterList[f] = 1;
 
         }
         else {
@@ -155,9 +193,9 @@ function CheckW(ww) {
         if (w[i] === word[i]) {
 
             e++;
-            
+
             letterList[w[i].charCodeAt(0)]--;
-            
+
             if (letterList[w[i].charCodeAt(0)] == 0) {
 
                 letterList[w[i].charCodeAt(0)] = null;
@@ -166,7 +204,7 @@ function CheckW(ww) {
 
         }
 
-    }  
+    }
     for (let i = 0; i < letterNumber; i++) {
 
         if (w[i] === word[i]) {
@@ -212,7 +250,7 @@ function CheckW(ww) {
 function CreateLetter(l, c) {
 
     currentHTML += letterText[0] + letterSize + letterText[1] + letterSize + letterText[2] + c + letterText[3] + l + letterText[4];
-    
+
     //currentHTML += letterStart + c + letterMiddle + l + letterEnd;
 
 }
@@ -257,5 +295,5 @@ function CheckLetter(c) {
         c == 250 || c == 233 || c == 225 || c == 237 ||
         c == 214 || c == 220 || c == 211 || c == 336 ||
         c == 218 || c == 201 || c == 193 || c == 205);
-    
+
 }
