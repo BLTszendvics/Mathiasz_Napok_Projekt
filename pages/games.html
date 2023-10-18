@@ -73,7 +73,7 @@
                 </div>
             </div>
 
-            <div class="row" style="position: relative;">
+            <div class="row" style="position: relative;" id="outrow">
 
                 <div id="outgames" style="padding: 2%; position: relative;">
 
@@ -107,7 +107,7 @@
 
                         <div class="game-area" id="game1"
                             style="display: none; width: 100%; position: relative; height: 100%;"
-                            ondragstart="return false;" ondrop="return false;" onmousemove="MouseMove(event)"
+                            ondragstart="return false;" ondrop="return false;" ontouchmove="TouchMove(event)" onmousemove="MouseMove(event)"
                             onscroll="Scroll(event)">
 
                             <!--<h2>Rakd ki a képet!</h2>-->
@@ -136,7 +136,7 @@
 
                             <div style="padding: 3%;">
 
-                                <input type="text" name="word" id="word" readonly>
+                                <input type="text" name="word" id="word">
 
                             </div>
                             <div id="wordcontainer">
@@ -151,7 +151,7 @@
                         </div>
 
                         <div class="game-area" id="game3" style="display: none;">
-                            <h2>Egészítsd ki a mondatokat!</h2>
+                            <h2 id="g3h2">Egészítsd ki a mondatokat!</h2>
                             <br>
                             <!--<label>
                             asd
@@ -169,7 +169,7 @@
                             <h2>Gratulálunk!</h2>
                             <br>
                             <p id="yourscore">
-                                A pontszámod:
+                                Az eredménytábla:
                             </p>
                             <p id="out">
 
@@ -191,8 +191,7 @@
                 </div>
 
             </div>
-
-            <div class="row">
+            <div class="row" style="margin-top: 5%;">
                 <div class="col-lg-12">
                     <h3 class="title divider">Játék</h3>
                 </div>

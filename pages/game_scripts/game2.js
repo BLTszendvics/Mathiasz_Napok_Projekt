@@ -41,8 +41,8 @@ let allWords = [
     "ÉKSZÍJ",
     "MOTORBLOKK",
     "LEFÚJÓSZELEP",
-    "OKTÁNSZÁM",
-    "DIFFERENCIÁLMŰ"
+    "OKTÁNSZÁM"/*,
+    "DIFFERENCIÁLMŰ"*/
 ]
 
 let word = [];
@@ -100,13 +100,52 @@ function Load2() {
 
     document.getElementById("wordlenumber").innerHTML = letterNumber + "\t" + "karakter";
 
+    let body = document.body,
+    html = document.documentElement;
+
+    let h = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight); // trust me, I wrote these previous lines by myself
+
+    h = h / 3 * 2;
+
+    //let h = window.body.clientHeight;
+
+    document.getElementById("game2").style.height = h + "px";
+    
+    document.getElementById("outgames").style.height = h + "px";
+
+
+    let wWidth = document.getElementById("game2").offsetWidth;
+
+    if (wWidth < 1000) {
+
+        max = 5;
+
+    }
+    else if (wWidth < 1200) {
+
+        max = 4;
+
+    }
+    else {
+
+        max = 3;
+
+    }
+
 }
+
+let enter = 13;
 
 function OtherPress(e) {
 
-    if (loaded && e.keyCode == 8 && document.getElementById("word").value.length > 0) {
+    if (document.activeElement.id !== "word" && loaded && e.keyCode == 8 && document.getElementById("word").value.length > 0) {
 
         document.getElementById("word").value = document.getElementById("word").value.slice(0, -1);
+
+    }
+    else if (e.keyCode == enter) {
+
+        Enter();
 
     }
 
@@ -114,9 +153,7 @@ function OtherPress(e) {
 
 function KeyPress(e) {
 
-    if (loaded) {
-
-        let enter = 13;
+    if (document.activeElement.id !== "word" && loaded) {
 
         let c = e.keyCode;
 
@@ -294,6 +331,7 @@ function CheckLetter(c) {
         c == 246 || c == 252 || c == 243 || c == 337 ||
         c == 250 || c == 233 || c == 225 || c == 237 ||
         c == 214 || c == 220 || c == 211 || c == 336 ||
-        c == 218 || c == 201 || c == 193 || c == 205);
+        c == 218 || c == 201 || c == 193 || c == 205 ||
+        c == 368 || c == 369);
 
 }

@@ -54,7 +54,7 @@ var cont = document.getElementById("imgcontainer");
 var Imgs = [];
 var iImgs = [];
 
-var imgr = [0, 1, 2];
+var imgr = [0, 1, 2, 3, 4];
 var imgn;
 
 var size = 4;
@@ -119,9 +119,10 @@ function LoadSizes() {
 function LoadThings() {
 
     let imageGap;
+    let gameHeight;
 
     // responsivity
-    if (wWidth < 800) {
+    if (wWidth < 700) {
 
         imageGap = 10;
 
@@ -131,7 +132,7 @@ function LoadThings() {
 
         imageMainSize = size * imageSize;
 
-        let gameHeight = imagesWidth + imageMainSize + imageGap * 5;
+        gameHeight = imagesWidth + imageMainSize + imageGap * 5;
 
         imageMainX = (wWidth - (size) * imageSize) / 2 + kmsX;
         imageMainY = imageMainSize + imageGap*7 + kmsY;
@@ -149,8 +150,6 @@ function LoadThings() {
         spawnPos[2] = size;
         spawnPos[3] = imageGap;
 
-        document.getElementById("game1").style.height = gameHeight + "px";
-
     }
     else if (wWidth < 1000) {
 
@@ -160,7 +159,7 @@ function LoadThings() {
 
         let imagesWidth = size * (imageSize + imageGap) - imageGap;
 
-        let gameHeight = imagesWidth + imageGap * 2;
+        gameHeight = imagesWidth + imageGap * 2;
 
         imageMainSize = size * imageSize;
 
@@ -179,8 +178,6 @@ function LoadThings() {
 
         spawnPos[2] = size;
         spawnPos[3] = imageGap;
-
-        document.getElementById("game1").style.height = gameHeight + "px";
 
     }
     else {
@@ -191,7 +188,7 @@ function LoadThings() {
 
         let imagesWidth = size * (imageSize + imageGap) - imageGap;
 
-        let gameHeight = imagesWidth + imageGap * 2;
+        gameHeight = imagesWidth + imageGap * 2;
 
         imageMainSize = size * imageSize;
 
@@ -211,9 +208,11 @@ function LoadThings() {
         spawnPos[2] = size;
         spawnPos[3] = imageGap;
 
-        document.getElementById("game1").style.height = gameHeight + "px";
-
     }
+
+    document.getElementById("game1").style.height = gameHeight + "px";
+    console.log(gameHeight);
+    document.getElementById("outgames").style.height = gameHeight + "px";
 
 }
 
@@ -237,6 +236,8 @@ function Spawn() {
         cont.innerHTML += (imgtext + 'id="i' + i + '"' 
         + 'onmousedown="MouseDown(event, ' + i + ')"'
         + 'onmouseup="MouseUp(event, ' + i + ')"'
+        + 'ontouchstart="MouseDown(event, ' + i + ')"'
+        + 'ontouchend="MouseUp(event, ' + i + ')"'
         + imgtexte);
 
         let o = "i" + i;
@@ -277,9 +278,28 @@ function MouseMove(m) {
 
 }
 
+function TouchMove(m) {
+
+    if (drag) {
+
+        GetTouchPositons(m);
+
+        Move(mx, my, iIndex);
+
+    }
+
+}
+
 function test0(m) {
 
     //console.log(m.clientX + " " + m.clientY);
+
+}
+
+function GetTouchPositons(m) {
+
+    mx = m.touches[0].clientX + window.scrollX;
+    my = m.touches[0].clientY + window.scrollY;
 
 }
 
@@ -291,6 +311,8 @@ function GetMousePositions(m) {
 }
 
 function MouseDown(m, iIndex) {
+
+    console.log("a");
 
     if (!drag) {
 

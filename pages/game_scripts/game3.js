@@ -1,10 +1,10 @@
 let inputtexts = [
     
-    "A ricsi ;2+dagadt+sovány+c;.;",
+    /*"A ricsi ;2+dagadt+sovány+c;.;",
     "A balázs nagyon;0+c+nagy+he?;!;",
     "A ;0+magyarokat+románokat+franciákat;szeressük.",
     "Who's gonna carry the;2+single moms+trains+boat;?!",
-    "Piros szív, fehér hó,;0+zöld+kék+rózsaszín;levél.",
+    "Piros szív, fehér hó,;0+zöld+kék+rózsaszín;levél.",*/
 
 
     "A gőzgépet ;1+Gotilieb Daimler+James Watt+Rudolf Diesel; találta fel.",
@@ -16,8 +16,13 @@ let inputtexts = [
     "A ;1+Juh+Borjú+Birka; a tehén kicsinye.",
     "A(z) ;2+ásás más szóval+palánták elültetése+növényvédelmi eljárás; a csávázás jelentése.",
 
-    "Az ekének a ;0+előhántó+tolórúd+kulissza;az egyik működő része"
+    "Az ekének a ;0+előhántó+tolórúd+kulissza;az egyik működő része",
 
+
+    "A rózsákat;1+február végén+amikor a levél rügyei megduzzadnak, bepirosodnak akkor+amikor a rózsa elvirágzott akkor;érdemes megmetszeni",
+    "A;1+Rozmaringnak+Tearózsának+Bazsalikomnak;nincsen rovarriasztó hatása.",
+    "Az alvószemzés;0+egy olyan oltásmód, amikor egy rügyet helyezünk át egy másik növénybe+egy olyan szaporítás fajta, amikor a növény egy szem termését használjuk fel+egy késő őszi kerti tevékenység, amikor a fagyérzékeny növényeket földdel fedünk be;.",
+    "A;2+Nárcisz+Jácint+Kőrislevelű ezerjófű;egy szárazságtűrő növény"
 ];
 
 let obj = [
@@ -29,7 +34,7 @@ let obj = [
     '">',
     '</option>',
     '</select>',
-    '<label>',
+    '<label style="margin-bottom:1%;">',
     '</label>',
     '<br>'
 
@@ -103,6 +108,25 @@ function Load3() {
         LoadSentence(i, i);
 
     }
+
+    LoadResponsivity();
+
+}
+
+function LoadResponsivity() {
+
+    let body = document.body,
+    html = document.documentElement;
+
+    let h = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight); // trust me, I wrote these previous lines by myself
+
+    h = h / 5 * 3;
+
+    document.getElementById("game3").style.height = h + "px";
+    
+    document.getElementById("outgames").style.height = h + "px";
+
+    document.getElementById("g3h2").style.marginBottom = h / 4 + "px";  
 
 }
 

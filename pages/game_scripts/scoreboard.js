@@ -62,7 +62,7 @@ function TextOut(b) {
             placed = true;
             curi = i;
 
-            t += "You " + curscore + "<br>";
+            t += "Te " + curscore + "<br>";
             
 
         }
@@ -72,7 +72,7 @@ function TextOut(b) {
     }
     if (!placed) {
 
-        t += "You " + curscore + "<br>";
+        t += "Te " + curscore + "<br>";
 
         placed = true;
         curi = score.length;
