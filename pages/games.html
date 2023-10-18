@@ -26,7 +26,8 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body onload="loadingAnimation()" style="margin:0;" onkeypress="KeyPress(event)" onkeydown="OtherPress(event)" onmousemove="test0(event)" id="body" style="position: relative;">
+<body onload="loadingAnimation()" style="margin:0;" onkeypress="KeyPress(event)" onkeydown="OtherPress(event)"
+    onmousemove="test0(event)" id="body" style="position: relative;">
     <div id="loader">
         <div class="duo duo1">
             <div class="dot dot-a"></div>
@@ -104,7 +105,8 @@
 
                     <div id="games" style="position: relative;">
 
-                        <div id="game1" style="display: none; width: 100%; position: relative; height: 100%; background-color: burlywood;"
+                        <div class="game-area" id="game1"
+                            style="display: none; width: 100%; position: relative; height: 100%;"
                             ondragstart="return false;" ondrop="return false;" onmousemove="MouseMove(event)"
                             onscroll="Scroll(event)">
 
@@ -121,9 +123,8 @@
 
                         </div>
 
-                        <div id="game2"
-                            style="display: none; width: 100%; height: 100%; background-color: lightskyblue;">
-                            
+                        <div class="game-area" id="game2" style="display: none; width: 100%; height: 100%;">
+
                             <h2>Találad ki a helyes szakszót!</h2>
                             <br>
 
@@ -149,9 +150,9 @@
 
                         </div>
 
-                        <div id="game3" style="display: none;">
+                        <div class="game-area" id="game3" style="display: none;">
                             <h2>Egészítsd ki a mondatokat!</h2>
-<br>
+                            <br>
                             <!--<label>
                             asd
                         </label>

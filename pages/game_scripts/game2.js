@@ -49,7 +49,7 @@ let word = [];
 let letterNumber;
 
 let green = "greenyellow"
-let def = "burlywood";
+let def = "red";
 let yellow = "yellow";
 
 let letterSize = 0;
