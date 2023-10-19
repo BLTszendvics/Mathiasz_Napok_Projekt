@@ -107,8 +107,8 @@
 
                         <div class="game-area" id="game1"
                             style="display: none; width: 100%; position: relative; height: 100%;"
-                            ondragstart="return false;" ondrop="return false;" ontouchmove="TouchMove(event)" onmousemove="MouseMove(event)"
-                            onscroll="Scroll(event)">
+                            ondragstart="return false;" ondrop="return false;" ontouchmove="TouchMove(event)"
+                            onmousemove="MouseMove(event)" onscroll="Scroll(event)">
 
                             <!--<h2>Rakd ki a képet!</h2>-->
                             <br>
@@ -136,7 +136,7 @@
 
                             <div style="padding: 3%;">
 
-                                <input type="text" name="word" id="word">
+                                <input type="text" name="word" id="word" oninput="TypeInInput(event)">
 
                             </div>
                             <div id="wordcontainer">
@@ -182,6 +182,11 @@
                                 <input type="input" id="yourname">
                                 <input type="button" value="Küldés" onclick="Rajmund()">
 
+                            </div>
+
+                            <div class="home-btn">
+                                <a href="../index.html"><h4 style="color: #EEEEEE;">Vissza a kezdőlapra!</h4>
+                                </a>
                             </div>
 
                         </div>

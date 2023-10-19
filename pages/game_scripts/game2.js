@@ -85,8 +85,6 @@ function Load2() {
 
     loaded = true;
 
-    letterSize = document.getElementById("body").offsetWidth / 16;
-
     let i = Math.floor(Math.random() * allWords.length);
     let w = allWords[i];
 
@@ -120,15 +118,21 @@ function Load2() {
 
         max = 5;
 
+        letterSize = document.getElementById("body").offsetWidth / 16;
+
     }
     else if (wWidth < 1200) {
 
         max = 4;
 
+        letterSize = document.getElementById("body").offsetWidth / 18;
+
     }
     else {
 
         max = 3;
+
+        letterSize = document.getElementById("body").offsetWidth / 20;
 
     }
 
@@ -169,6 +173,20 @@ function KeyPress(e) {
         }
 
     }
+
+}
+
+function TypeInInput(e) {
+
+    let n = e.data.charCodeAt(0);
+
+    if (n != 8 && !CheckLetter(n)) {
+
+        document.getElementById("word").value = document.getElementById("word").value.slice(0, -1);
+
+    }
+
+    console.log();
 
 }
 

@@ -312,3 +312,7 @@ a:hover {
     border-radius: 10px;
     color: #111111;
 }
+
+.home-btn {
+    padding-top: 150px;
+}
